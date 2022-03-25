@@ -8,7 +8,7 @@ function About() {
     
     return( 
 
-    <aboutKaffeWrapper>
+    <AboutKaffeWrapper>
         <div>
         <Header />
         </div>
@@ -57,14 +57,14 @@ function About() {
             <p className="namn">Eva Cortado</p>
             <p className="vd">VD & Grundare</p>
         </section>
-    </aboutKaffeWrapper>
+    </AboutKaffeWrapper>
     )
 }
 
 export default About;
 
-const aboutKaffeWrapper = styled.div `
-    background-color: #F3E4E1;
+const AboutKaffeWrapper = styled.div `
+background-color: #f3e4e1;
 
 
 .ingress {
