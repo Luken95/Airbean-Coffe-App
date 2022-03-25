@@ -1,3 +1,10 @@
 .App {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 375px;
+  height: 667px;
   text-align: center;
+  background-color: #E5E5E5;
+  flex-direction: column;
 }
