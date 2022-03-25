@@ -69,7 +69,7 @@ function About() {
 export default About;
 
 const AboutKaffeWrapper = styled.div `
-    background-color: #F3E4E1;
+background-color: #f3e4e1;
 
 
 .ingress {
