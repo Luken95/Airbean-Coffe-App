@@ -1,5 +1,6 @@
 import MenuItem from '../components/MenuItem'
 import {useState, useEffect} from 'react';
+import './Menylista.css'
 
 
 
@@ -24,7 +25,7 @@ const listComponents = menu.map((menuItem, index) =>{
 })
 
     return (
-      <div>
+      <div className='menuContainer'>
         <h1>Meny</h1>
         { listComponents }
 
