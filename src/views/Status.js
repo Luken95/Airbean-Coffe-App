@@ -25,10 +25,9 @@ function Status() {
 
   return (
     <section className="statusSection">
-      <h2>Hej</h2>
+      <p>{eta.orderNr}</p>
       <img src={drone} alt="drone"/>
       <p>{eta.eta}</p>
-      <p>{eta.orderNr}</p>
       <button onClick={ handleOnClick }>Ok, Cool!</button>
     </section>
   )
