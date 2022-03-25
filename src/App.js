@@ -5,9 +5,6 @@ import Status from './views/Status';
 import Landing from './views/Landing';
 import Menylista from './views/Menylista';
 
-
-import { Routes, Route } from 'react-router-dom';
-
 import About from './views/About';
 
 function App() {
