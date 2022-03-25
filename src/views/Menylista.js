@@ -23,8 +23,15 @@ const listComponents = menu.map((menuItem, index) =>{
     return <MenuItem menuItem={ menuItem } key={ index } />
 })
 
+function cartOnClick() {
+  console.log("hej");
+}
+
     return (
       <div>
+        <div>
+          <button onClick={ cartOnClick }>cart</button>
+        </div>
         <h1>Meny</h1>
         { listComponents }
 
