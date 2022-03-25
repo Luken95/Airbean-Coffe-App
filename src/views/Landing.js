@@ -3,10 +3,17 @@ import '../index.css'
 import landingText from '../assets/graphics/airbean-landing.svg';
 import leftLanding from '../assets/graphics/intro-graphic-left.svg';
 import rightLanding from '../assets/graphics/intro-graphic-right.svg';
+import { useNavigate } from 'react-router-dom'
 
 function Landing() {
+    const navigate = useNavigate();
+
+    function clickLanding() {
+        navigate('/menu')
+    }
+
     return (
-        <section className="landingContainer">
+        <section className="landingContainer" onClick={ clickLanding }>
             <img src={ landingText } alt="AIRBEAN" className='landingText'/>
             <img src={ leftLanding } alt="left" className='leftLanding'/>
             <img src={ rightLanding } alt="right" className='rightLanding'/>
