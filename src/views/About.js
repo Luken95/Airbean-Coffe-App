@@ -3,12 +3,13 @@ import styled from "styled-components";
 import EvaCortado from "../assets/graphics/eva-cortado.jpg"
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function About() {
     
     return( 
 
-    <aboutKaffeWrapper>
+    <AboutKaffeWrapper>
         <div>
         <Header />
         </div>
@@ -57,13 +58,17 @@ function About() {
             <p className="namn">Eva Cortado</p>
             <p className="vd">VD & Grundare</p>
         </section>
-    </aboutKaffeWrapper>
+    
+        <div>
+            <Footer />
+        </div>
+    </AboutKaffeWrapper>
     )
 }
 
 export default About;
 
-const aboutKaffeWrapper = styled.div `
+const AboutKaffeWrapper = styled.div `
     background-color: #F3E4E1;
 
 

@@ -4,10 +4,14 @@ import graphicsHeader from "../assets/graphics/graphics-header.svg";
 
 function Header() {
     return (
-        <div>
+        <HeaderWrapper>
             <img src={ graphicsHeader } alt="graphicsHeader"/>
-        </div>
+        </HeaderWrapper>
     )
 }
 
 export default Header;
+
+const HeaderWrapper = styled.div`
+display: unset;
+`

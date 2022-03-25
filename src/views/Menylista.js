@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react';
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Menylista (){
 
@@ -22,11 +24,15 @@ function Menylista (){
 
 return(
 <div>
+  <div>
+    <Header />
+  </div>
+
 <h1>Meny</h1>
 
-
-
-
+  <div>
+    <Footer />
+  </div>
 </div>
 )
 }
