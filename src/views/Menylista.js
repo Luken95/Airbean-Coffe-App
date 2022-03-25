@@ -26,21 +26,26 @@ function Menylista() {
       return <MenuItem menuItem={ menuItem } key={ index } />
   })
 
-return(
-<div className='menuContainer'>
-  <div>
-    <Header />
-  </div>
+function cartOnClick() {
+  console.log("hej");
+}
 
-<h1>Meny</h1>
-{ listComponents }
+    return (
+      <div className='menuContainer'>
+        <div>
+          <Header />
+        </div>
+        <div>
+          <button onClick={ cartOnClick }>cart</button>
+        </div>
+          <h1>Meny</h1>
+          { listComponents }
+        <div>
+          <Footer />
+        </div>
+      </div>
 
-  <div>
-    <Footer />
-  </div>
-</div>
-
-)
+  )
 }
 
 export default Menylista

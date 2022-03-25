@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import drone from '../assets/graphics/drone.svg';
-
+import './Status.css'
 
 function Status() {
   const [ eta, setEta ] = useState('');
