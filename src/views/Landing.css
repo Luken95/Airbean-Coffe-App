@@ -1,10 +1,23 @@
 .landingContainer {
+  position: absolute;
   background-color: #38846d;
   height: 100%;
   width: 100%;
 }
 
 .landingText {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  top: 250px;
+}
+
+.leftLanding {
+  position: relative;
+  left: -32px;
+  top: -156px;
+}
+
+.rightLanding {
+  position: relative;
+  left: 31px;
+  top: -153px;
 }

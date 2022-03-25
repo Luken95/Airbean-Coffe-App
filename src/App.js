@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css'
 import { Routes, Route } from 'react-router-dom';
 
 import Status from './views/Status';
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
      <Routes>
       <Route path="/status" element={ <Status /> } />
-      <Route path='/landing' element={ <Landing /> }></Route>
+      <Route path='/' element={ <Landing /> }></Route>
       <Route path='/menu' element={ <Menylista /> } />
       <Route path="/about" element = { <About/> } />
      </Routes>
