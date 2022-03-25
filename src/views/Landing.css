@@ -6,27 +6,18 @@
 }
 
 .landingText {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 60%;
-  left: 24%;
-  color: #fff;
+  position: relative;
+  top: 250px;
 }
 
-.landingTitle {
-  margin: 0;
-  padding: 0;
-  font-family: "Rufina";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  align-items: center;
-  text-align: center;
-  color: #fff;
+.leftLanding {
+  position: relative;
+  left: -32px;
+  top: -156px;
 }
 
-.landingSmallText {
-  font-size: 10px;
-  letter-spacing: 2px;
+.rightLanding {
+  position: relative;
+  left: 31px;
+  top: -153px;
 }
