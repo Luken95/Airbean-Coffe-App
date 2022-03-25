@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
-import Status from './views/Status'
+import Status from './views/Status';
 import Landing from './views/Landing';
 
 
