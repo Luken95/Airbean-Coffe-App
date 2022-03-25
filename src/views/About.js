@@ -5,12 +5,12 @@ import EvaCortado from "../assets/graphics/eva-cortado.jpg"
 function About() {
     
     return( 
-    <div>
+    <aboutKaffeWrapper>
         <section>
-        <h1>Vårt Kaffe</h1>
+        <h1 className="">Vårt Kaffe</h1>
         </section>
 
-        <section>
+        <section className="ingress">
             <h2>Pumpkin spice mug, barista cup, sit macchiato, 
             kopi-luwak, doppio, grounds dripper, crema, strong whipped, 
             variety extra iced id lungo half and half mazagran. 
@@ -18,7 +18,7 @@ function About() {
             </h2>
         </section>
 
-        <section>
+        <section className="styckeett">
             <h4>
             Que dark fair trade, spoon decaffeinated, 
             barista wings whipped, as rich aftertaste, con panna milk black, 
@@ -32,7 +32,7 @@ function About() {
             </h4>
         </section>
 
-        <section>
+        <section className="stycketvå">
             <h4>    
             Roast id macchiato, single shot siphon mazagran milk 
             fair trade est aroma a half and half and, so, 
@@ -47,15 +47,16 @@ function About() {
 
         <section>
             <img src={ EvaCortado } alt="EvaCortado"/>
-            <p>Eva Cortado</p>
-            <p>VD & Grundare</p>
+            <p className="namn">Eva Cortado</p>
+            <p className="vd">VD & Grundare</p>
         </section>
-    </div>
+    </aboutKaffeWrapper>
     )
 }
 
 export default About;
 
-const wrapper = styled.div `
+const aboutKaffeWrapper = styled.div `
+    background-color: #F3E4E1;
 
 `
