@@ -38,18 +38,14 @@ function cartOnClick() {
         <div>
           <button onClick={ cartOnClick }>cart</button>
         </div>
-        <h1>Meny</h1>
-        { listComponents }
+          <h1>Meny</h1>
+          { listComponents }
+        <div>
+          <Footer />
+        </div>
+      </div>
 
-<h1>Meny</h1>
-{ listComponents }
-
-  <div>
-    <Footer />
-  </div>
-</div>
-
-)
+  )
 }
 
 export default Menylista
