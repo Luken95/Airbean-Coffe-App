@@ -2,6 +2,8 @@ import MenuItem from '../components/MenuItem'
 import {useState, useEffect} from 'react';
 import './Menylista.css'
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 function Menylista() {
@@ -20,18 +22,25 @@ function Menylista() {
       getMenu();
     }, []);
 
-const listComponents = menu.map((menuItem, index) =>{
-    return <MenuItem menuItem={ menuItem } key={ index } />
-})
+    const listComponents = menu.map((menuItem, index) =>{
+      return <MenuItem menuItem={ menuItem } key={ index } />
+  })
 
-    return (
-      <div className='menuContainer'>
-        <h1>Meny</h1>
-        { listComponents }
+return(
+<div className='menuContainer'>
+  <div>
+    <Header />
+  </div>
 
+<h1>Meny</h1>
+{ listComponents }
 
-      </div>
-  )
+  <div>
+    <Footer />
+  </div>
+</div>
+
+)
 }
 
 export default Menylista
