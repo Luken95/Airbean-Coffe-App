@@ -1,4 +1,11 @@
-.navbar{
-position: absolute;
+.Navbar{
+width: 375px;
+height: 667px;
 background-color: black;
+}
+
+.Links{
+
+color: white;
+
 }
