@@ -2,10 +2,17 @@ import styled from "styled-components";
 
 import EvaCortado from "../assets/graphics/eva-cortado.jpg"
 
+import Header from "../components/Header";
+
 function About() {
     
     return( 
+
     <aboutKaffeWrapper>
+        <div>
+        <Header />
+        </div>
+
         <section>
         <h1 className="">Vårt Kaffe</h1>
         </section>
@@ -58,7 +65,7 @@ export default About;
 
 const aboutKaffeWrapper = styled.div `
     background-color: #F3E4E1;
-    font-family: ;
+
 
 .ingress {
     font-style: bold;
