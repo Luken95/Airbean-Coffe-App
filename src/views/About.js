@@ -11,15 +11,15 @@ function About() {
         </section>
 
         <section className="ingress">
-            <h2>Pumpkin spice mug, barista cup, sit macchiato, 
+            <h4>Pumpkin spice mug, barista cup, sit macchiato, 
             kopi-luwak, doppio, grounds dripper, crema, strong whipped, 
             variety extra iced id lungo half and half mazagran. 
             Pumpkin spice. 
-            </h2>
+            </h4>
         </section>
 
         <section className="styckeett">
-            <h4>
+            <p>
             Que dark fair trade, spoon decaffeinated, 
             barista wings whipped, as rich aftertaste, con panna milk black, 
             arabica white rich beans single shot extra affogato. 
@@ -29,11 +29,11 @@ function About() {
             grounds caramelization skinny aromatic cup kopi-luwak, 
             fair trade flavour, frappuccino medium, café au lait flavour 
             cultivar ut bar instant kopi-luwak.
-            </h4>
+            </p>
         </section>
 
         <section className="stycketvå">
-            <h4>    
+            <p>    
             Roast id macchiato, single shot siphon mazagran milk 
             fair trade est aroma a half and half and, so, 
             galão iced to go, whipped as cream cup pumpkin spice iced. 
@@ -42,7 +42,7 @@ function About() {
             black java milk sit trifecta, robusta, acerbic café au lait instant shop latte. 
             Seasonal bar shop filter aroma id, crema, affogato viennese cultivar aftertaste, seasonal, 
             percolator cream black, galão flavour, milk aromatic turkish skinny crema.
-            </h4>
+            </p>
         </section>
 
         <section>
@@ -58,5 +58,9 @@ export default About;
 
 const aboutKaffeWrapper = styled.div `
     background-color: #F3E4E1;
+    font-family: ;
 
+.ingress {
+    font-style: bold;
+}
 `
