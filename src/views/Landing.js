@@ -1,10 +1,14 @@
 import './Landing.css';
+import '../index.css'
 //import '../assets/graphics'
 
 function Landing() {
     return (
         <section className="landingContainer">
-            <h2 className='landingText'>Landing</h2>
+            <article className='landingText'>
+            <p className='landingTitle'>AIR BEAN</p>
+            <p className='landingSmallText'>DRONEDELIVERED COFFEE</p>
+            </article>
         </section>
     )
 }
