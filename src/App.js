@@ -11,8 +11,6 @@ import About from './views/About';
 function App() {
   return (
     <div className="App">
-      <p>testa</p>
-
      <Routes>
       <Route path="/status" element={ <Status /> } />
       <Route path='/' element={ <Landing /> }></Route>
