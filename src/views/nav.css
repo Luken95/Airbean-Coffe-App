@@ -1,11 +1,25 @@
 .Navbar{
 width: 375px;
 height: 667px;
-background-color: black;
+background-color: #2F2926;
+font-family: serif;
+font-size: 32px;
+font-weight: 700, bold;
+font-style: normal;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
 }
 
 .Links{
-
 color: white;
+}
 
+.dash{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    width: 58px;
 }
