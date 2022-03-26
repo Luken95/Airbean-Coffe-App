@@ -4,9 +4,13 @@ import './Menylista.css'
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Cart from "../components/Cart";
+
+import { useRef } from 'react';
 
 
 function Menylista() {
+    const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
 
     async function getMenu(){
@@ -27,7 +31,11 @@ function Menylista() {
   })
 
 function cartOnClick() {
-  console.log("hej");
+  modal.current.showModal();
+}
+
+function closeCart() {
+  modal.current.close();
 }
 
     return (
@@ -35,11 +43,21 @@ function cartOnClick() {
         <div>
           <Header />
         </div>
+
         <div>
           <button onClick={ cartOnClick }>cart</button>
         </div>
+
+        <dialog ref={modal} className="modal" id="modal">
+          <h1>Tjenare</h1>
+          <button onClick={closeCart}>close</button>
+        </dialog>
+
+        <div className="menuList">
           <h1>Meny</h1>
           { listComponents }
+        </div>
+
         <div>
           <Footer />
         </div>

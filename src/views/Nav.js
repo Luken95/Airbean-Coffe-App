@@ -1,11 +1,11 @@
-import{ Link } from 'react-router-dom' 
-import './nav.css';
+import{ Link } from 'react-router-dom'
+import './Nav.css';
 
 function Nav (){
 
 
 return(
-    
+
 <section className='Navbar'>
 
 <Link to="/menu"> Meny </Link>
@@ -21,5 +21,3 @@ return(
 }
 
 export default Nav
-
-

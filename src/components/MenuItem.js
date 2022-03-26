@@ -1,9 +1,12 @@
 function MenuItem(props) {
   const { menuItem } = props;
 
+  function addToStore() {
+    console.log(menuItem);
+  }
 
   return (
-    <section>
+    <section onClick={ addToStore }>
       <p>-----</p>
       <p>{ menuItem.title }</p>
       <p>{ menuItem.desc }</p>
