@@ -19,7 +19,7 @@ function MenuItem(props) {
       {/* <div className="icon-container">
       <img src={ icon } alt="add" className="iconAdd"/>
       </div> */}
-      <button>lol</button>
+      <button img src={ icon }>lol</button>
 
       <div className="menuTitlePris-container">
       <p className="menuItemTitle">{ menuItem.title }</p>
@@ -56,8 +56,7 @@ const MenuItemWrapper = styled.section`
   font-size: x-large;
   align-content: start;
   margin: 0px;
-
-
+  
   .menuItemDesc {
   display: flex;
   align-content: end;
