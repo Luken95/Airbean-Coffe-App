@@ -19,6 +19,7 @@ function MenuItem(props) {
       {/* <div className="icon-container">
       <img src={ icon } alt="add" className="iconAdd"/>
       </div> */}
+
       <div className="buttonMenuTitle-container">
       <input type="image" src={ icon } alt="add" className="addButton" onClick={ addToStore }/>
 
@@ -32,6 +33,7 @@ function MenuItem(props) {
       </div>
       <div className="Pris-container">
         <p className="menuItemPris" >{ menuItem.price }kr</p>
+
       </div>
     </MenuItemWrapper>
   )
@@ -43,7 +45,6 @@ const MenuItemWrapper = styled.section`
   width: 88%;
   display: inline-flex;
   margin-bottom: 10px;
-  justify-content: space-between;
   cursor: pointer;
   align-items: center;
 
@@ -71,6 +72,7 @@ const MenuItemWrapper = styled.section`
 
 
 }
+
   .menuItemDesc {
     margin:1px;
   font-family: 'Work Sans';
