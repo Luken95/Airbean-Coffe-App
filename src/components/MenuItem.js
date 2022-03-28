@@ -47,6 +47,7 @@ const MenuItemWrapper = styled.section`
   margin-bottom: 10px;
   cursor: pointer;
   align-items: center;
+  justify-content: space-between;
 
 .buttonMenuTitle-container{
   display: flex;
