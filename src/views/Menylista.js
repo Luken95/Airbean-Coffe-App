@@ -1,6 +1,8 @@
 import MenuItem from '../components/MenuItem'
+import { useState, useEffect } from 'react';
+import './Menylista.css'
+import cartImage from '../assets/graphics/bag.svg'
 import { useNavigate } from 'react-router-dom'
-import {useState, useEffect} from 'react';
 import './Menylista.css'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
@@ -20,6 +22,8 @@ function Menylista() {
     const dispatch = useDispatch();
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
+    let [showModal, setShowModal] = useState(false);
+
     const cartItems = useSelector((state) => { return state.cart })
 
     async function getMenu(){
@@ -29,6 +33,9 @@ function Menylista() {
       setMenu(data);
     }
 
+    console.log(showModal)
+
+
     useEffect(() => {
       getMenu();
     }, []);
@@ -37,6 +44,7 @@ function Menylista() {
       return <MenuItem menuItem={ menuItem } key={ index } />
   })
 
+ function cartOnClick() {
 
     const cartListComponents = cartItems.map((thisItem) => {
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
@@ -45,11 +53,13 @@ function Menylista() {
 
 function cartOnClick() {
   modal.current.showModal();
-}
+    }
+  
+ 
 
-function closeCart() {
+ function closeCart() {
   modal.current.close();
-}
+} 
 
 function finishOrder(){
   dispatch(resetCart());
@@ -63,15 +73,16 @@ function finishOrder(){
         </div>
 
         <div>
-          <button onClick={ cartOnClick }>cart</button>
+          <button className='cartButton' onClick={ cartOnClick }></button>
         </div>
-
+        
         <dialog ref={modal} className="modal">
           <h1>Cart</h1>
           { cartListComponents }
           <button onClick={ closeCart }>close</button>
           <button onClick={ finishOrder }>Take my money!</button>
         </dialog>
+        
 
         <div className="menuList">
           <h1>Meny</h1>
