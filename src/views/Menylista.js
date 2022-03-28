@@ -1,10 +1,13 @@
 import MenuItem from '../components/MenuItem'
 import {useState, useEffect} from 'react';
 import './Menylista.css'
+import { useSelector } from 'react-redux'
+
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Cart from "../components/Cart";
+import CartItem from "../components/CartItem";
 
 import { useRef } from 'react';
 
@@ -12,15 +15,14 @@ import { useRef } from 'react';
 function Menylista() {
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
+    const cartItems = useSelector((state) => { return state.cart })
 
     async function getMenu(){
       const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu`)
       const data = await response.json();
 
-      console.log(data);
       setMenu(data);
     }
-
 
     useEffect(() => {
       getMenu();
@@ -29,6 +31,12 @@ function Menylista() {
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
   })
+
+
+    const cartListComponents = cartItems.map((thisItem) => {
+      return <CartItem cartItem={thisItem.cartItem} thisId={ thisItem.id } key={ thisItem.id } />
+    })
+
 
 function cartOnClick() {
   modal.current.showModal();
@@ -49,7 +57,9 @@ function closeCart() {
         </div>
 
         <dialog ref={modal} className="modal">
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+          <h1>Cart</h1>
+          { cartListComponents }
+          <p>slut på cart</p>
           <button onClick={ closeCart }>close</button>
         </dialog>
 
