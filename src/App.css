@@ -9,4 +9,5 @@
   flex-direction: column;
   overflow: auto;
   overflow-x: hidden;
+  font-family: sans-serif;
 }

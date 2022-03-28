@@ -2,4 +2,22 @@
   background: #E5674E;
   height: 100%;
   width: 100%;
+  color: white;
+}
+
+.ordertext{
+font-size: 36px;
+}
+
+p{
+font-size: 18px;
+}
+
+.statusbtn{
+width: 138px;
+height: 44px;
+border-radius: 25px;
+border: none;
+font-size: 20px;
+font-weight: 600;
 }
