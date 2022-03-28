@@ -42,7 +42,7 @@ function Menylista() {
 
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
-  })
+    })
 
 
     const cartListComponents = cartItems.map((thisItem) => {
