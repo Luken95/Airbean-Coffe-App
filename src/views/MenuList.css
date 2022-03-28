@@ -4,10 +4,13 @@
 }
 
 .modal {
-  width: 35%;
+  position: absolute;
+  width: 22%;
+  height: 40%;
+  top: -400px;
 }
 
-modal::backdrop {
+.modal::backdrop {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -19,8 +22,8 @@ modal::backdrop {
   bottom: 90.94%;
   background-image: url("../assets/graphics/bag.svg");
   background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
   background-position: center;
-  background: #2f2926;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
   width: 60px;
   height: 60px;
@@ -28,6 +31,21 @@ modal::backdrop {
 }
 
 .closeCartButton {
+}
+
+.counter {
+  position: absolute;
+  top: 10px;
+  left: 320px;
+  z-index: 2;
+  background-color: #e5674e;
+  display: flex;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  padding: 2px;
+  color: #fff;
 }
 
 /* .footer-container {

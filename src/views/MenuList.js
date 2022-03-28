@@ -1,19 +1,16 @@
 import MenuItem from '../components/MenuItem'
-import { useState, useEffect } from 'react';
-import cartImage from '../assets/graphics/bag.svg'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react';
 import './MenuList.css'
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux';
+/* import cartImage from '../assets/graphics/bag.svg' */
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from '../actions/cartAction';
 
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Cart from "../components/Cart";
+/* import Cart from "../components/Cart"; */
 import CartItem from "../components/CartItem";
-
-import { useRef } from 'react';
 
 
 function Menylista() {
@@ -22,6 +19,8 @@ function Menylista() {
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
     let [showModal, setShowModal] = useState(false);
+    let counter = 0,
+        totalPrice = 0;
 
     const cartItems = useSelector((state) => { return state.cart })
 
@@ -31,8 +30,6 @@ function Menylista() {
 
       setMenu(data);
     }
-
-    console.log(showModal)
 
 
     useEffect(() => {
@@ -45,29 +42,37 @@ function Menylista() {
 
 
     const cartListComponents = cartItems.map((thisItem) => {
+      counter = counter + thisItem.quantity;
+      totalPrice = totalPrice + ( thisItem.quantity * thisItem.cartItem.price);
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
     })
 
 
 function cartOnClick() {
   modal.current.showModal();
-    }
-
-
+}
 
  function closeCart() {
   modal.current.close();
 }
 
 function finishOrder(){
-  dispatch(resetCart());
-  navigate('/status');
+  console.log(cartItems);
+  if(cartItems.lenght > 0){
+    dispatch(resetCart());
+    navigate('/status');
+  }else{
+    console.log("no items in cart");
+  }
 }
 
     return (
       <div className='menuContainer'>
         <div>
           <Header />
+        </div>
+        <div className='counter'>
+          { counter }
         </div>
 
         <div>
@@ -79,6 +84,7 @@ function finishOrder(){
           { cartListComponents }
           <button onClick={ closeCart }>close</button>
           <button onClick={ finishOrder }>Take my money!</button>
+          <p>Total price {totalPrice}kr</p>
         </dialog>
 
 
