@@ -1,3 +1,4 @@
+import './CartItem.css'
 import { useDispatch } from 'react-redux';
 import { addCartItem, removeCartItem } from '../actions/cartAction';
 
@@ -13,12 +14,16 @@ function subtractItem(){
   dispatch(removeCartItem(cartItem));
 }
   return (
-    <section>
-    <p>{quantity}</p>
-    <p>{cartItem.title}</p>
-    <p>{quantity*cartItem.price}kr</p>
-    <button onClick={ addItem }>add one</button>
-    <button onClick={ subtractItem }>remove one</button>
+    <section className="cartItemSection">
+      <section className="titleSection">
+      <p className="title">{cartItem.title}</p>
+      <p className="price">{quantity*cartItem.price}kr</p>
+      </section>
+      <section className="quantitySection">
+      <button className="quantityButton addButton" onClick={ addItem }>+</button>
+      <p className="quantity">{quantity}</p>
+      <button className="quantityButton removeButton" onClick={ subtractItem }>-</button>
+      </section>
     </section>
   )
 }

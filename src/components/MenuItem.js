@@ -19,7 +19,7 @@ function MenuItem(props) {
       {/* <div className="icon-container">
       <img src={ icon } alt="add" className="iconAdd"/>
       </div> */}
-      <button>lol</button>
+      <button className="addButton">+</button>
 
       <div className="menuTitlePris-container">
       <p className="menuItemTitle">{ menuItem.title }</p>
@@ -65,6 +65,15 @@ const MenuItemWrapper = styled.section`
 
     }
   }
+}
+
+.addButton {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
 }
 
 .menyItemPris {
