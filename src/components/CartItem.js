@@ -16,6 +16,7 @@ function subtractItem(){
     <section>
     <p>{quantity}</p>
     <p>{cartItem.title}</p>
+    <p>{quantity*cartItem.price}kr</p>
     <button onClick={ addItem }>add one</button>
     <button onClick={ subtractItem }>remove one</button>
     <p>-----</p>
