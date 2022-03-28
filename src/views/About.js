@@ -54,7 +54,9 @@ function About() {
         </section>
 
         <section>
-            <img src={ EvaCortado } alt="EvaCortado"/>
+            <br></br>
+            <img src={ EvaCortado } className="profilePic" alt="EvaCortado"/>
+            <br></br>
             <p className="namn">Eva Cortado</p>
             <p className="vd">VD & Grundare</p>
         </section>
@@ -71,6 +73,18 @@ export default About;
 const AboutKaffeWrapper = styled.div `
 background-color: #f3e4e1;
 
+.profilePic{
+    border-radius: 50%;
+}
+
+.namn{
+    font-size: 22px;
+    font-weight: 700, bold;
+}
+
+.vd{
+    font-size: 12px
+}
 
 .ingress {
     font-style: bold;
