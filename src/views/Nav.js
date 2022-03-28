@@ -7,14 +7,17 @@ function Nav (){
 return(
 
 <section className='Navbar'>
-
-<Link to="/menu"> Meny </Link>
+<Link className='Links' to="/menu" style={{ textDecoration: 'none' }}> Meny </Link>
 <br></br>
+<div className="dash"></div>
 <br></br>
-<Link to="/about"> Vårt kaffe </Link>
+<Link className='Links' to="/about" style={{ textDecoration: 'none' }}> Vårt kaffe </Link>
 <br></br>
+<div className="dash"></div>
 <br></br>
-<Link to="/status"> Orderstatus </Link>
+<Link className='Links' to="/status" style={{ textDecoration: 'none' }}> Orderstatus </Link>
+<br></br>
+<div className="dash"></div>
 
 </section>
 )
