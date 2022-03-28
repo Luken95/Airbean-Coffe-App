@@ -18,7 +18,6 @@ function subtractItem(){
     <p>{cartItem.title}</p>
     <button onClick={ addItem }>add one</button>
     <button onClick={ subtractItem }>remove one</button>
-
     <p>-----</p>
     </section>
   )

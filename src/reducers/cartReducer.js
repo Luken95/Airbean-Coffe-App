@@ -18,7 +18,6 @@ const cartReducer = (state = initialState, action) => {
         return thisCartItem;
       }
     });
-
     if(addedQuantity){
       return {
         ...state,
@@ -38,6 +37,7 @@ const cartReducer = (state = initialState, action) => {
       ]
     }
     }
+
     case 'REMOVE_CART_ITEM':
     const removeArray = state.cart.filter((thisCartItem) =>{
       if(thisCartItem.id === action.payload.id){
@@ -53,6 +53,10 @@ const cartReducer = (state = initialState, action) => {
       ...state,
       cart: removeArray
     }
+
+    case 'RESET_CART':
+    return initialState;
+
     default :
     return state;
   }

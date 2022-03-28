@@ -16,16 +16,18 @@ function MenuItem(props) {
   return (
     <MenuItemWrapper onClick={ addToStore }>
       {/* <p>-----</p> */}
-      <div className="icon-container">
+      {/* <div className="icon-container">
       <img src={ icon } alt="add" className="iconAdd"/>
-      </div>
+      </div> */}
+      <button>lol</button>
+
       <div className="menuTitlePris-container">
       <p className="menuItemTitle">{ menuItem.title }</p>
       <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
-      <div>
+
       <p className="menuItemPris" >{ menuItem.price }kr</p>
-      </div>
+
     </MenuItemWrapper>
   )
 }
@@ -39,26 +41,28 @@ const MenuItemWrapper = styled.section`
   transform: translate(20%);
   align-content: center;
   justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
   transition: transform 200ms;
   cursor: pointer;
 
+
 .menuTitlePris-container {
-  display: flex; 
+  display: grid;
   align-items: left;
-  
+
   .menuItemTitle {
   display: flex;
   font-weight: 700, Bold;
   font-size: x-large;
   align-content: start;
+  margin: 0px;
 
 
   .menuItemDesc {
   display: flex;
   align-content: end;
-  
-    
+
+
     }
   }
 }
