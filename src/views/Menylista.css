@@ -33,6 +33,21 @@
 .closeCartButton {
 }
 
+.counter {
+  position: absolute;
+  top: 10px;
+  left: 320px;
+  z-index: 2;
+  background-color: #e5674e;
+  display: flex;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  padding: 2px;
+  color: #fff;
+}
+
 /* .footer-container {
   position:
 } */
