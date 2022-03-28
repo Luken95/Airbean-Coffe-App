@@ -22,7 +22,7 @@ function MenuItem(props) {
     
       <button className="addButton">+</button>
 
-      <div className="menuTitlePris-container">
+      <div className="menuTitleDesc-container">
       <p className="menuItemTitle">{ menuItem.title }</p>
       <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
@@ -37,9 +37,9 @@ export default MenuItem;
 
 const MenuItemWrapper = styled.section`
   max-width: 70%;
-  position: relative;
-  display: flex;
-  transform: translate(20%);
+  display: inline-flex;
+  margin-bottom: 10px;
+
   align-content: center;
   justify-content: space-around;
   flex-direction: row;
@@ -47,7 +47,7 @@ const MenuItemWrapper = styled.section`
   cursor: pointer;
 
 
-.menuTitlePris-container {
+.menuTitleDesc-container {
   display: grid;
   align-items: left;
 
