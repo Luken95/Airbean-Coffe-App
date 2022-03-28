@@ -9,7 +9,7 @@ const cartReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'ADD_CART_ITEM':
-    const newArray = state.cart.filter((thisCartItem) =>{
+    const addArray = state.cart.filter((thisCartItem) =>{
       if (thisCartItem.id === action.payload.id){
         thisCartItem.quantity++;
         addedQuantity = true;
@@ -22,7 +22,7 @@ const cartReducer = (state = initialState, action) => {
     if(addedQuantity){
       return {
         ...state,
-        cart: newArray
+        cart: addArray
       }
     }else {
 
@@ -37,6 +37,21 @@ const cartReducer = (state = initialState, action) => {
         }
       ]
     }
+    }
+    case 'REMOVE_CART_ITEM':
+    const removeArray = state.cart.filter((thisCartItem) =>{
+      if(thisCartItem.id === action.payload.id){
+        thisCartItem.quantity--;
+        if(thisCartItem.quantity > 0){
+          return thisCartItem;
+        }
+      }else{
+        return thisCartItem;
+      }
+    });
+    return {
+      ...state,
+      cart: removeArray
     }
     default :
     return state;
