@@ -1,0 +1,35 @@
+.cartItemSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleSection{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-family: 'PT Serif';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.price {
+  margin: 0;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+}
+
+.quantityButton {
+  background: none;
+  border: none;
+}
+
+.quantity{
+  margin: 0;
+}
