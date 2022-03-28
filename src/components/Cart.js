@@ -1,9 +1,14 @@
+import { useRef } from 'react';
+
 function Cart(){
+  const modal = useRef(null);
+
+
 
   return (
-    <section>
+    <dialog ref={modal} class="modal" id="modal">
     <h1>Tjenare</h1>
-    </section>
+    </dialog>
   )
 }
 

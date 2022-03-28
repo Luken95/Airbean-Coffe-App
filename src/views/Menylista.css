@@ -1,3 +1,13 @@
 .menuContainer {
   background-color: #f3e4e1;
+  height: 100%;
+}
+
+.modal {
+  width: 85%
+
+}
+
+modal::backdrop {
+  background: rgba(0,0,0,0.8);
 }
