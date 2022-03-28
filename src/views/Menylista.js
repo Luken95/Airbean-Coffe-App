@@ -58,7 +58,7 @@ function closeCart() {
           { listComponents }
         </div>
 
-        <div>
+        <div className="footer-container">
           <Footer />
         </div>
       </div>
