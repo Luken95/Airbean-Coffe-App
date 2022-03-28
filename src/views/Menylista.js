@@ -1,6 +1,8 @@
 import MenuItem from '../components/MenuItem'
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import './Menylista.css'
+import cartImage from '../assets/graphics/bag.svg'
+
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -12,6 +14,8 @@ import { useRef } from 'react';
 function Menylista() {
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
+    let [showModal, setShowModal] = useState(false);
+
 
     async function getMenu(){
       const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu`)
@@ -20,6 +24,8 @@ function Menylista() {
       console.log(data);
       setMenu(data);
     }
+
+    console.log(showModal)
 
 
     useEffect(() => {
@@ -30,13 +36,15 @@ function Menylista() {
       return <MenuItem menuItem={ menuItem } key={ index } />
   })
 
-function cartOnClick() {
+ function cartOnClick() {
   modal.current.showModal();
-}
+    }
+  
+ 
 
-function closeCart() {
+ function closeCart() {
   modal.current.close();
-}
+} 
 
     return (
       <div className='menuContainer'>
@@ -45,13 +53,18 @@ function closeCart() {
         </div>
 
         <div>
-          <button onClick={ cartOnClick }>cart</button>
+          <button className='cartButton' onClick={ cartOnClick }></button>
         </div>
+        
 
-        <dialog ref={modal} className="modal">
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
-          <button onClick={closeCart}>close</button>
+        <dialog className="modal" ref={modal}>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+            <button className='closeCartButton' onClick={ closeCart }>Close</button>
         </dialog>
+        
 
         <div className="menuList">
           <h1>Meny</h1>
