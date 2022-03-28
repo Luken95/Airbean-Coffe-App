@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useDispatch } from 'react-redux';
 import { addCartItem, removeCartItem } from '../actions/cartAction';
 
+import icon from "../assets/graphics/add.svg";
+
 function MenuItem(props) {
   const { menuItem } = props;
   const dispatch = useDispatch();
@@ -14,6 +16,9 @@ function MenuItem(props) {
   return (
     <MenuItemWrapper onClick={ addToStore }>
       {/* <p>-----</p> */}
+      {/* <div className="icon-container">
+      <img src={ icon } alt="add" className="iconAdd"/>
+      </div> */}
       <button>lol</button>
 
       <div className="menuTitlePris-container">
@@ -65,6 +70,14 @@ const MenuItemWrapper = styled.section`
 .menyItemPris {
       display: flex;
 
+}
+
+.icon-container {
+  background-color: black;
+
+.iconAdd {
+  size: 10px;
+}
 }
 
 /* &:nth-last-child(7) {
