@@ -34,7 +34,7 @@ function Menylista() {
 
 
     const cartListComponents = cartItems.map((thisItem) => {
-      return <CartItem cartItem={thisItem.cartItem} thisId={ thisItem.id } key={ thisItem.id } />
+      return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
     })
 
 
