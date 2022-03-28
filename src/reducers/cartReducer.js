@@ -53,6 +53,10 @@ const cartReducer = (state = initialState, action) => {
       ...state,
       cart: removeArray
     }
+    case 'RESET_CART':
+    return {
+      ...initialState
+      }
     default :
     return state;
   }
