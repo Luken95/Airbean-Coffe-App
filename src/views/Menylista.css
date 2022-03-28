@@ -5,9 +5,7 @@
 
 .modal {
   position: absolute;
-  width: 22%;
-  height: 40%;
-  top: -400px;
+  width: 300px;
 }
 
 .modal::backdrop {
@@ -36,7 +34,7 @@
 .counter {
   position: absolute;
   top: 10px;
-  left: 320px;
+  left: 325px;
   z-index: 2;
   background-color: #e5674e;
   display: flex;
