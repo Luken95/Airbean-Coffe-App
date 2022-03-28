@@ -1,9 +1,8 @@
 import MenuItem from '../components/MenuItem'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Menylista.css'
 import cartImage from '../assets/graphics/bag.svg'
 import { useNavigate } from 'react-router-dom'
-import './Menylista.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from '../actions/cartAction';
 
@@ -13,16 +12,16 @@ import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 import CartItem from "../components/CartItem";
 
-import { useRef } from 'react';
-
 
 function Menylista() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
+    let [showModal, setShowModal] = useState(false);
+    let counter = 0,
+        totalPrice = 0;
 
-    let counter = 0;
     const cartItems = useSelector((state) => { return state.cart })
 
     async function getMenu(){
@@ -44,6 +43,7 @@ function Menylista() {
 
     const cartListComponents = cartItems.map((thisItem) => {
       counter = counter + thisItem.quantity;
+      totalPrice = totalPrice + ( thisItem.quantity * thisItem.cartItem.price);
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
     })
 
@@ -84,6 +84,7 @@ function finishOrder(){
           { cartListComponents }
           <button onClick={ closeCart }>close</button>
           <button onClick={ finishOrder }>Take my money!</button>
+          <p>Total price {totalPrice}kr</p>
         </dialog>
 
 
