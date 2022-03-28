@@ -1,8 +1,13 @@
+import { useDispatch } from 'react-redux';
+import { addCartItem, removeCartItem } from '../actions/cartAction';
+
 function MenuItem(props) {
   const { menuItem } = props;
+  const dispatch = useDispatch();
 
   function addToStore() {
     console.log(menuItem);
+    dispatch(addCartItem(menuItem));
   }
 
   return (
