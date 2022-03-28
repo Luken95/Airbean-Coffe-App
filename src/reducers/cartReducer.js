@@ -3,17 +3,28 @@ const initialState = {
 }
 let counter = 0;
 
+
 const cartReducer = (state = initialState, action) => {
+  let addedQuantity = false;
+
   switch(action.type) {
     case 'ADD_CART_ITEM':
-    const newArray = state.cart.filter((cartItem) =>{
-      if (cartItem.id === action.payload.id){
-        cartItem.quantity++
+    const newArray = state.cart.filter((thisCartItem) =>{
+      if (thisCartItem.id === action.payload.id){
+        thisCartItem.quantity++;
+        addedQuantity = true;
+        return thisCartItem;
       }else{
-        return cartItem;
+        return thisCartItem;
       }
-      console.log(newArray);
-    })
+    });
+
+    if(addedQuantity){
+      return {
+        ...state,
+        cart: newArray
+      }
+    }else {
 
     return {
       ...state,
@@ -25,6 +36,7 @@ const cartReducer = (state = initialState, action) => {
           cartItem: action.payload
         }
       ]
+    }
     }
     default :
     return state;
