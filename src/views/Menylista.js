@@ -42,9 +42,8 @@ function Menylista() {
 
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
-  })
+    })
 
- function cartOnClick() {
 
     const cartListComponents = cartItems.map((thisItem) => {
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
@@ -54,12 +53,12 @@ function Menylista() {
 function cartOnClick() {
   modal.current.showModal();
     }
-  
- 
+
+
 
  function closeCart() {
   modal.current.close();
-} 
+}
 
 function finishOrder(){
   dispatch(resetCart());
@@ -75,14 +74,14 @@ function finishOrder(){
         <div>
           <button className='cartButton' onClick={ cartOnClick }></button>
         </div>
-        
+
         <dialog ref={modal} className="modal">
           <h1>Cart</h1>
           { cartListComponents }
           <button onClick={ closeCart }>close</button>
           <button onClick={ finishOrder }>Take my money!</button>
         </dialog>
-        
+
 
         <div className="menuList">
           <h1>Meny</h1>
