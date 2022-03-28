@@ -14,20 +14,22 @@ function MenuItem(props) {
   }
 
   return (
-    <MenuItemWrapper onClick={ addToStore }>
+    <MenuItemWrapper >
       {/* <p>-----</p> */}
       {/* <div className="icon-container">
       <img src={ icon } alt="add" className="iconAdd"/>
       </div> */}
-      <button className="addButton">+</button>
+      <div className="buttonMenuTitle-container">
+      <button className="addButton" onClick={ addToStore }>+</button>
 
-      <div className="menuTitlePris-container">
-      <p className="menuItemTitle">{ menuItem.title }</p>
-      <p className="menuItemDesc" >{ menuItem.desc }</p>
+      <div className="menuTitle-container">
+        <p className="menuItemTitle">{ menuItem.title }</p>
+        <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
-
-      <p className="menuItemPris" >{ menuItem.price }kr</p>
-
+      </div>
+      <div className="Pris-container">
+        <p className="menuItemPris" >{ menuItem.price }kr</p>
+      </div>
     </MenuItemWrapper>
   )
 }
@@ -35,36 +37,43 @@ function MenuItem(props) {
 export default MenuItem;
 
 const MenuItemWrapper = styled.section`
-  max-width: 70%;
-  position: relative;
-  display: flex;
-  transform: translate(20%);
-  align-content: center;
-  justify-content: space-around;
-  flex-direction: row;
-  transition: transform 200ms;
+  width: 82%;
+  display: inline-flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
   cursor: pointer;
 
+.buttonMenuTitle-container{
+  display: flex;
+}
+.menuTitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-.menuTitlePris-container {
-  display: grid;
-  align-items: left;
-
+}
   .menuItemTitle {
-  display: flex;
-  font-weight: 700, Bold;
-  font-size: x-large;
-  align-content: start;
-  margin: 0px;
+    margin:0;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
 
 
+}
   .menuItemDesc {
+    margin:1px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+
+}
+
+.Pris-container{
   display: flex;
-  align-content: end;
-
-
-    }
-  }
 }
 
 .addButton {
@@ -76,10 +85,6 @@ const MenuItemWrapper = styled.section`
   font-size: 24px;
 }
 
-.menyItemPris {
-      display: flex;
-
-}
 
 .icon-container {
   background-color: black;
