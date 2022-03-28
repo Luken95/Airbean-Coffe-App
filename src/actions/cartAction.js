@@ -11,5 +11,10 @@ const removeCartItem = (cartItem) =>{
     payload: cartItem
   }
 }
+const resetCart = () =>{
+  return {
+    type: 'RESET_CART'
+  }
+}
 
-export { addCartItem, removeCartItem }
+export { addCartItem, removeCartItem, resetCart }
