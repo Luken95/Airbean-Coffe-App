@@ -25,10 +25,15 @@ function Status() {
 
   return (
     <section className="statusSection">
-      <p>{eta.orderNr}</p>
+      <br></br>
+      <p>Ordernummer #{eta.orderNr}</p>
+      <br></br> <br></br> <br></br> 
       <img src={drone} alt="drone"/>
-      <p>{eta.eta}</p>
-      <button onClick={ handleOnClick }>Ok, Cool!</button>
+      <br></br> <br></br>
+      <h3 className="ordertext"> Din beställning är påväg!</h3>
+      <p>{eta.eta} minuter</p>
+      <br></br> <br></br> <br></br> 
+      <button className='statusbtn' onClick={ handleOnClick }>Ok, Cool!</button>
     </section>
   )
 

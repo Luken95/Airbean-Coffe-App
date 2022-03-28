@@ -1,9 +1,9 @@
 import MenuItem from '../components/MenuItem'
-import { useNavigate } from 'react-router-dom'
-import {useState, useEffect} from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Menylista.css'
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux';
+import cartImage from '../assets/graphics/bag.svg'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from '../actions/cartAction';
 
 
@@ -12,14 +12,16 @@ import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 import CartItem from "../components/CartItem";
 
-import { useRef } from 'react';
-
 
 function Menylista() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
+    let [showModal, setShowModal] = useState(false);
+    let counter = 0,
+        totalPrice = 0;
+
     const cartItems = useSelector((state) => { return state.cart })
 
     async function getMenu(){
@@ -29,16 +31,19 @@ function Menylista() {
       setMenu(data);
     }
 
+
     useEffect(() => {
       getMenu();
     }, []);
 
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
-  })
+    })
 
 
     const cartListComponents = cartItems.map((thisItem) => {
+      counter = counter + thisItem.quantity;
+      totalPrice = totalPrice + ( thisItem.quantity * thisItem.cartItem.price);
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
     })
 
@@ -47,13 +52,18 @@ function cartOnClick() {
   modal.current.showModal();
 }
 
-function closeCart() {
+ function closeCart() {
   modal.current.close();
 }
 
 function finishOrder(){
-  dispatch(resetCart());
-  navigate('/status');
+  console.log(cartItems);
+  if(cartItems.lenght > 0){
+    dispatch(resetCart());
+    navigate('/status');
+  }else{
+    console.log("no items in cart");
+  }
 }
 
     return (
@@ -61,9 +71,12 @@ function finishOrder(){
         <div>
           <Header />
         </div>
+        <div className='counter'>
+          { counter }
+        </div>
 
         <div>
-          <button onClick={ cartOnClick }>cart</button>
+          <button className='cartButton' onClick={ cartOnClick }></button>
         </div>
 
         <dialog ref={modal} className="modal">
@@ -71,7 +84,9 @@ function finishOrder(){
           { cartListComponents }
           <button onClick={ closeCart }>close</button>
           <button onClick={ finishOrder }>Take my money!</button>
+          <p>Total price {totalPrice}kr</p>
         </dialog>
+
 
         <div className="menuList">
           <h1>Meny</h1>
