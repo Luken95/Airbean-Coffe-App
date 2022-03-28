@@ -20,10 +20,13 @@ function MenuItem(props) {
       <img src={ icon } alt="add" className="iconAdd"/>
       </div> */}
       <div className="buttonMenuTitle-container">
-      <button className="addButton" onClick={ addToStore }>+</button>
+      <input type="image" src={ icon } alt="add" className="addButton" onClick={ addToStore }/>
 
       <div className="menuTitle-container">
-        <p className="menuItemTitle">{ menuItem.title }</p>
+        <div className="titelDotts">
+          <p className="menuItemTitle">{ menuItem.title }</p>
+          {/*<p className="dottedLine">............................</p>*/}
+        </div>
         <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
       </div>
@@ -37,17 +40,23 @@ function MenuItem(props) {
 export default MenuItem;
 
 const MenuItemWrapper = styled.section`
-  width: 82%;
+  width: 88%;
   display: inline-flex;
   margin-bottom: 10px;
   justify-content: space-between;
   cursor: pointer;
+  align-items: center;
 
 .buttonMenuTitle-container{
   display: flex;
 }
+
+.titelDotts{
+  display: flex;
+}
 .menuTitle-container {
   display: flex;
+  margin-left:15px;
   flex-direction: column;
   align-items: flex-start;
 
@@ -77,12 +86,13 @@ const MenuItemWrapper = styled.section`
 }
 
 .addButton {
-  height: 32px;
-  width: 32px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   background-color: #000;
-  color: #fff;
+  /* color: #fff; */
   font-size: 24px;
+  padding:8px;
 }
 
 
