@@ -22,7 +22,7 @@ function Menylista() {
     const dispatch = useDispatch();
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
-    let [showModal, setShowModal] = useState(false);
+    //let [showModal, setShowModal] = useState(false);
 
     const cartItems = useSelector((state) => { return state.cart })
 
@@ -33,8 +33,6 @@ function Menylista() {
       setMenu(data);
     }
 
-    console.log(showModal)
-
 
     useEffect(() => {
       getMenu();
@@ -43,8 +41,6 @@ function Menylista() {
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
   })
-
- function cartOnClick() {
 
     const cartListComponents = cartItems.map((thisItem) => {
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
