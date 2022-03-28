@@ -21,7 +21,7 @@ function Menylista() {
     const dispatch = useDispatch();
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
-    let [showModal, setShowModal] = useState(false);
+
     let counter = 0;
     const cartItems = useSelector((state) => { return state.cart })
 
@@ -31,8 +31,6 @@ function Menylista() {
 
       setMenu(data);
     }
-
-    console.log(showModal)
 
 
     useEffect(() => {
@@ -73,9 +71,12 @@ function finishOrder(){
         <div>
           <Header />
         </div>
+        <div className='counter'>
+          { counter }
+        </div>
 
         <div>
-          <button className='cartButton' onClick={ cartOnClick }> {counter} </button>
+          <button className='cartButton' onClick={ cartOnClick }></button>
         </div>
 
         <dialog ref={modal} className="modal">
