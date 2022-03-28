@@ -7,7 +7,7 @@
   width: 35%;
 }
 
-modal::backdrop {
+.modal::backdrop {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -20,7 +20,6 @@ modal::backdrop {
   background-image: url("../assets/graphics/bag.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background: #2f2926;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
   width: 60px;
   height: 60px;
