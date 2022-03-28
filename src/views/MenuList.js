@@ -1,9 +1,8 @@
 import MenuItem from '../components/MenuItem'
 import { useState, useEffect } from 'react';
-import './Menylista.css'
 import cartImage from '../assets/graphics/bag.svg'
 import { useNavigate } from 'react-router-dom'
-import './Menylista.css'
+import './MenuList.css'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { resetCart } from '../actions/cartAction';
