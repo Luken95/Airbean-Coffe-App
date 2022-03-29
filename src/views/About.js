@@ -1,17 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
 import EvaCortado from "../assets/graphics/eva-cortado.jpg"
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function About() {
+
+    let navigate = useNavigate();
+
+    function toNav(){
+        navigate('/nav')
+    }
     
     return( 
 
     <AboutKaffeWrapper>
         <div>
         <Header />
+        <button className="menuButton" onClick={ toNav }></button>
         </div>
 
         <section>
@@ -85,6 +91,17 @@ background-color: #f3e4e1;
 .vd{
     font-size: 12px
 }
+
+.menuButton {
+    background-image: url("../assets/graphics/nav-icon.png");
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
 
 .ingress {
     font-style: bold;
