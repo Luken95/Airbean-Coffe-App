@@ -29,6 +29,9 @@
 }
 
 .menuButton {
+  position: absolute;
+  left: 14px;
+  top: 1.91%;
   background-image: url("../assets/graphics/navicon.svg");
   background-repeat: no-repeat;
   background-color: white;
