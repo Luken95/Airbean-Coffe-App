@@ -1,7 +1,6 @@
 const initialState = {
   cart: []
 }
-let counter = 0;
 
 
 const cartReducer = (state = initialState, action) => {

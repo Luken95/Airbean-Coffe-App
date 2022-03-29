@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addCartItem, removeCartItem } from '../actions/cartAction';
 
 function CartItem(props) {
-  const { cartItem, thisId, quantity } = props
+  const { cartItem, quantity } = props
   const dispatch = useDispatch();
 
 function addItem(){
