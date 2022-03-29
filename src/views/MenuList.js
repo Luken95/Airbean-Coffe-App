@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from '../actions/cartAction';
 
-import './Menylista.css'
+import './MenuList.css'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CartItem from "../components/CartItem";
@@ -66,6 +66,10 @@ function cartOnClick() {
   modal.current.close();
 }
 
+function redirectMenu(){
+navigate('/nav')
+}
+
 function finishOrder(){
   console.log(cartItems);
   if(cartItems.lenght > 0){
@@ -87,6 +91,10 @@ function finishOrder(){
 
         <div>
           <button className='cartButton' onClick={ cartOnClick }></button>
+        </div>
+
+        <div>
+        <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
         <dialog ref={modal} className="modal">

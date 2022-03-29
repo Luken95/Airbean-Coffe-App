@@ -15,6 +15,19 @@
   color: white;
 }
 
+.crossButton {
+  position: absolute;
+  left: 14px;
+  top: 1.91%;
+  background-image: url("../assets/graphics/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
 .dash {
   margin-left: auto;
   margin-right: auto;
