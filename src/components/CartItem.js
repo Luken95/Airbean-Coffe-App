@@ -20,9 +20,9 @@ function subtractItem(){
       <p className="price">{quantity*cartItem.price}kr</p>
       </section>
       <section className="quantitySection">
-      <button className="quantityButton addButton" onClick={ addItem }>+</button>
+      <button className="quantityButton addButton" onClick={ addItem }></button>
       <p className="quantity">{quantity}</p>
-      <button className="quantityButton removeButton" onClick={ subtractItem }>-</button>
+      <button className="quantityButton removeButton" onClick={ subtractItem }></button>
       </section>
     </section>
   )

@@ -45,6 +45,7 @@
 
 
 .closeCartButton {
+
 }
 
 .counter {
@@ -60,6 +61,12 @@
   border-radius: 50%;
   padding: 2px;
   color: #fff;
+}
+
+.moneyBtn {
+  background-color: #2F2926;
+  color: white;
+  border-radius: 25px;
 }
 
 /* .footer-container {
