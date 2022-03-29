@@ -77,6 +77,7 @@ function finishOrder(){
 
         <div>
           <button className='cartButton' onClick={ cartOnClick }></button>
+         {/*  <button className */}
         </div>
 
         <dialog ref={modal} className="modal">
