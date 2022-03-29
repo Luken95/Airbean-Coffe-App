@@ -16,7 +16,13 @@
 }
 
 .crossButton {
+  position: absolute;
+  left: 14px;
+  top: 1.91%;
   background-image: url("../assets/graphics/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
