@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useDispatch } from 'react-redux';
-import { addCartItem, removeCartItem } from '../actions/cartAction';
+import { addCartItem } from '../actions/cartAction';
 
 import icon from "../assets/graphics/add.svg";
 
@@ -14,20 +14,27 @@ function MenuItem(props) {
   }
 
   return (
-    <MenuItemWrapper onClick={ addToStore }>
+    <MenuItemWrapper >
       {/* <p>-----</p> */}
       {/* <div className="icon-container">
       <img src={ icon } alt="add" className="iconAdd"/>
       </div> */}
-      <button className="addButton">+</button>
 
-      <div className="menuTitlePris-container">
-      <p className="menuItemTitle">{ menuItem.title }</p>
-      <p className="menuItemDesc" >{ menuItem.desc }</p>
+      <div className="buttonMenuTitle-container">
+      <input type="image" src={ icon } alt="add" className="addButton" onClick={ addToStore }/>
+
+      <div className="menuTitle-container">
+        <div className="titelDotts">
+          <p className="menuItemTitle">{ menuItem.title }</p>
+          {/*<p className="dottedLine">............................</p>*/}
+        </div>
+        <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
+      </div>
+      <div className="Pris-container">
+        <p className="menuItemPris" >{ menuItem.price }kr</p>
 
-      <p className="menuItemPris" >{ menuItem.price }kr</p>
-
+      </div>
     </MenuItemWrapper>
   )
 }
@@ -35,51 +42,62 @@ function MenuItem(props) {
 export default MenuItem;
 
 const MenuItemWrapper = styled.section`
-  max-width: 70%;
-  position: relative;
-  display: flex;
-  transform: translate(20%);
-  align-content: center;
-  justify-content: space-around;
-  flex-direction: row;
-  transition: transform 200ms;
+  width: 88%;
+  display: inline-flex;
+  margin-bottom: 30px;
   cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
 
-
-.menuTitlePris-container {
-  display: grid;
-  align-items: left;
-
-  .menuItemTitle {
+.buttonMenuTitle-container{
   display: flex;
-  font-weight: 700, Bold;
-  font-size: x-large;
-  align-content: start;
-  margin: 0px;
+}
 
+.titelDotts{
+  display: flex;
+}
+.menuTitle-container {
+  display: flex;
+  margin-left:15px;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+  .menuItemTitle {
+    margin:0;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
+
+
+}
 
   .menuItemDesc {
+    margin:1px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+
+}
+
+.Pris-container{
   display: flex;
-  align-content: end;
-
-
-    }
-  }
 }
 
 .addButton {
-  height: 32px;
-  width: 32px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   background-color: #000;
-  color: #fff;
+  /* color: #fff; */
   font-size: 24px;
+  padding:8px;
 }
 
-.menyItemPris {
-      display: flex;
-
-}
 
 .icon-container {
   background-color: black;
