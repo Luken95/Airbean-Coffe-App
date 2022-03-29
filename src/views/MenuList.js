@@ -56,6 +56,10 @@ function cartOnClick() {
   modal.current.close();
 }
 
+function redirectMenu(){
+navigate('/nav')
+}
+
 function finishOrder(){
   console.log(cartItems);
   if(cartItems.lenght > 0){
@@ -77,7 +81,10 @@ function finishOrder(){
 
         <div>
           <button className='cartButton' onClick={ cartOnClick }></button>
-         {/*  <button className */}
+        </div>
+
+        <div> 
+        <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
         <dialog ref={modal} className="modal">

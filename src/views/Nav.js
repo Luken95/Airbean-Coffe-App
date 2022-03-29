@@ -1,12 +1,17 @@
-import{ Link } from 'react-router-dom'
+import{ Link, useNavigate } from 'react-router-dom'
 import './Nav.css';
 
 function Nav (){
+let navigate = useNavigate();
 
+    function redirectToPrevious(){
+        navigate(-1)
+        }
 
 return(
 
 <section className='Navbar'>
+<button className='crossButton' onClick={ redirectToPrevious }> </button>
 <Link className='Links' to="/menu" style={{ textDecoration: 'none' }}> Meny </Link>
 <br></br>
 <div className="dash"></div>
