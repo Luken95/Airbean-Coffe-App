@@ -1,17 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
 import EvaCortado from "../assets/graphics/eva-cortado.jpg"
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function About() {
+
+    let navigate = useNavigate();
+
+    function toNav(){
+        navigate('/nav')
+    }
     
     return( 
 
     <AboutKaffeWrapper>
         <div>
         <Header />
+        <button className="menuButton" onClick={ toNav }></button>
         </div>
 
         <section>

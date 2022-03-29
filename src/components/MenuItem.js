@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useDispatch } from 'react-redux';
-import { addCartItem, removeCartItem } from '../actions/cartAction';
+import { addCartItem } from '../actions/cartAction';
 
 import icon from "../assets/graphics/add.svg";
 

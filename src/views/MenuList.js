@@ -1,16 +1,13 @@
-import MenuItem from '../components/MenuItem'
 import { useState, useEffect, useRef } from 'react';
-import './Menylista.css'
-import cartImage from '../assets/graphics/bag.svg'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { resetCart } from '../actions/cartAction';
 
-
+import './MenuList.css'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Cart from "../components/Cart";
 import CartItem from "../components/CartItem";
+import MenuItem from '../components/MenuItem'
 
 
 function Menylista() {
@@ -18,9 +15,9 @@ function Menylista() {
     const dispatch = useDispatch();
     const modal = useRef(null);
     const [ menu, setMenu ] = useState([]);
-    let [showModal, setShowModal] = useState(false);
     let counter = 0,
         totalPrice = 0;
+    let x = 0,y = 0, z = 0;
 
     const cartItems = useSelector((state) => { return state.cart })
 
@@ -43,8 +40,21 @@ function Menylista() {
 
     const cartListComponents = cartItems.map((thisItem) => {
       counter = counter + thisItem.quantity;
-      totalPrice = totalPrice + ( thisItem.quantity * thisItem.cartItem.price);
-      return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} thisId={ thisItem.id } key={ thisItem.id } />
+      if(thisItem.id === 1){
+        x = thisItem.quantity;
+      }else if(thisItem.id === 7){
+        y = thisItem.quantity;
+      }
+      while(x > 0 && y > 0){
+        z++;
+        x--;
+        y--;
+      }
+      totalPrice = totalPrice + (thisItem.quantity * thisItem.cartItem.price);
+      if(z > 0){
+        totalPrice = totalPrice - (38 * z);
+      }
+      return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} key={thisItem.id} />
     })
 
 
@@ -54,6 +64,10 @@ function cartOnClick() {
 
  function closeCart() {
   modal.current.close();
+}
+
+function redirectMenu(){
+navigate('/nav')
 }
 
 function finishOrder(){
@@ -77,6 +91,10 @@ function finishOrder(){
 
         <div>
           <button className='cartButton' onClick={ cartOnClick }></button>
+        </div>
+
+        <div>
+        <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
         <dialog ref={modal} className="modal">
