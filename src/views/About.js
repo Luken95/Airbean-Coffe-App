@@ -92,17 +92,6 @@ background-color: #f3e4e1;
     font-size: 12px
 }
 
-.menuButton {
-    background-image: url("../assets/graphics/nav-icon.png");
-    background-repeat: no-repeat;
-    background-color: white;
-    background-position: center;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-
-
 .ingress {
     font-style: bold;
 }
