@@ -28,8 +28,29 @@
 .quantityButton {
   background: none;
   border: none;
+  width: 10px;
+  height: 10px;
+}
+
+.addButton {
+  background-image: url("../assets/graphics/arrow-up.svg");
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.removeButton {
+  background-image: url("../assets/graphics/arrow-down.svg");
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.quantitySection {
+  display: inline-block;
+
 }
 
 .quantity{
+  display: flex;
   margin: 0;
+  font-family: "PT Serif";
 }

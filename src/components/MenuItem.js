@@ -44,7 +44,7 @@ export default MenuItem;
 const MenuItemWrapper = styled.section`
   width: 88%;
   display: inline-flex;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   cursor: pointer;
   align-items: center;
   justify-content: space-between;

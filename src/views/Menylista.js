@@ -82,9 +82,12 @@ function finishOrder(){
         <dialog ref={modal} className="modal">
           <h1>Cart</h1>
           { cartListComponents }
+          <div>
+          <p>Total {totalPrice}kr</p>
+          <p>inkl moms + drövarleverenas</p>
+          </div>
           <button onClick={ closeCart }>close</button>
-          <button onClick={ finishOrder }>Take my money!</button>
-          <p>Total price {totalPrice}kr</p>
+          <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
         </dialog>
 
 
