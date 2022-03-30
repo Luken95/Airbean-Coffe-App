@@ -13,10 +13,10 @@ function Landing() {
     }
 
     return (
-        <section className="landingContainer" onClick={ clickLanding }>
+        <section className="landingContainer">
             <img src={ landingText } alt="AIRBEAN" className='landingText'/>
             <img src={ leftLanding } alt="left" className='leftLanding'/>
-            <img src={ rightLanding } alt="right" className='rightLanding'/>
+            <img src={ rightLanding } alt="right" className='rightLanding'  onClick={ clickLanding }/>
         </section>
     )
 }
