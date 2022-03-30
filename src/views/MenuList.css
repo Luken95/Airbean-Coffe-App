@@ -5,7 +5,9 @@
 
 .modal {
   position: absolute;
+  top: -230px;
   width: 300px;
+  height: 530px;
 }
 
 .modal::backdrop {
@@ -43,9 +45,7 @@
   border-radius: 50%;
 }
 
-
 .closeCartButton {
-
 }
 
 .counter {
@@ -64,9 +64,30 @@
 }
 
 .moneyBtn {
-  background-color: #2F2926;
+  background-color: #2f2926;
   color: white;
   border-radius: 25px;
+}
+
+.shoppingCart {
+  position: absolute;
+  display: none;
+  width: 341px;
+  background-color: #fff;
+  left: 4.53%;
+  right: 4.53%;
+  top: 11.03%;
+  bottom: 2.6%;
+}
+
+.menuArrow {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  top: -5px;
+  right: 12.7px;
 }
 
 /* .footer-container {

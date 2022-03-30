@@ -8,6 +8,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CartItem from "../components/CartItem";
 import MenuItem from '../components/MenuItem'
+import styledComponents from 'styled-components';
+import { getByDisplayValue } from '@testing-library/react';
 
 
 function Menylista() {
@@ -58,13 +60,18 @@ function Menylista() {
     })
 
 
+
+const showMenu = useRef(null)
+
 function cartOnClick() {
-  modal.current.showModal();
+  console.log(showMenu)
+  if (showMenu.current.style.display === 'block') {
+    showMenu.current.style.display = 'none'
+  } else {
+    showMenu.current.style.display = 'block';
+  }
 }
 
- function closeCart() {
-  modal.current.close();
-}
 
 function redirectMenu(){
 navigate('/nav')
@@ -97,17 +104,17 @@ function finishOrder(){
         <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
-        <dialog ref={modal} className="modal">
+
+        <div className='shoppingCart' ref={ showMenu }>
+          <div className='menuArrow'></div>
           <h1>Cart</h1>
           { cartListComponents }
           <div>
           <p>Total {totalPrice}kr</p>
           <p>inkl moms + drövarleverenas</p>
           </div>
-          <button onClick={ closeCart }>close</button>
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
-        </dialog>
-
+        </div>
 
         <div className="menuList">
           <h1>Meny</h1>

@@ -11,3 +11,8 @@
   overflow-x: hidden;
   font-family: sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
