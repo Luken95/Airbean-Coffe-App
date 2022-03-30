@@ -13,15 +13,19 @@ import { getByDisplayValue } from '@testing-library/react';
 
 
 function Menylista() {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const modal = useRef(null);
-    const [ menu, setMenu ] = useState([]);
+    const navigate = useNavigate(),
+          dispatch = useDispatch(),
+          modal = useRef(null),
+          [ menu, setMenu ] = useState([]),
+          cartItems = useSelector((state) => { return state.cart }),
+          showMenu = useRef(null);
     let counter = 0,
-        totalPrice = 0;
-    let x = 0,y = 0, z = 0;
+        totalPrice = 0,
+        campaignProductOne = 0,
+        campaignProductTwo = 0,
+        campaignDiscountTimes = 0;
 
-    const cartItems = useSelector((state) => { return state.cart })
+
 
     async function getMenu(){
       const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu`)
@@ -43,25 +47,25 @@ function Menylista() {
     const cartListComponents = cartItems.map((thisItem) => {
       counter = counter + thisItem.quantity;
       if(thisItem.id === 1){
-        x = thisItem.quantity;
+        campaignProductOne = thisItem.quantity;
       }else if(thisItem.id === 7){
-        y = thisItem.quantity;
+        campaignProductTwo = thisItem.quantity;
       }
-      while(x > 0 && y > 0){
-        z++;
-        x--;
-        y--;
+      while(campaignProductOne > 0 && campaignProductTwo > 0){
+        campaignDiscountTimes++;
+        campaignProductOne--;
+        campaignProductTwo--;
       }
       totalPrice = totalPrice + (thisItem.quantity * thisItem.cartItem.price);
-      if(z > 0){
-        totalPrice = totalPrice - (38 * z);
+      if(campaignDiscountTimes > 0){
+        totalPrice = totalPrice - (38 * campaignDiscountTimes);
       }
       return <CartItem cartItem={thisItem.cartItem} quantity={thisItem.quantity} key={thisItem.id} />
     })
 
 
 
-const showMenu = useRef(null)
+
 
 function cartOnClick() {
   console.log(showMenu)
@@ -74,7 +78,7 @@ function cartOnClick() {
 
 
 function redirectMenu(){
-navigate('/nav')
+navigate('/nav');
 }
 
 function finishOrder(){
