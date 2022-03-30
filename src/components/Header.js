@@ -13,5 +13,5 @@ function Header() {
 export default Header;
 
 const HeaderWrapper = styled.div`
-display: unset;
+display: flex;
 `

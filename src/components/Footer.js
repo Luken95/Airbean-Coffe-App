@@ -3,7 +3,7 @@ import styled from "styled-components";
 import graphicsFooter from "../assets/graphics/graphics-footer.svg";
 
 function Footer() {
-    
+
     return (
         <FooterWrapper>
             <img src={ graphicsFooter } alt="grapicsFooter"/>
@@ -13,7 +13,7 @@ function Footer() {
 
 
 const FooterWrapper = styled.div`
-
+display: flex;
 
 `
 
