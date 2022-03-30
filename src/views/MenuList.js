@@ -115,8 +115,7 @@ function finishOrder(){
           <h2>Din beställning</h2>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
-          <p className='total'>Total</p>
-          <p className='totalPrice'>{totalPrice}kr</p>
+          <p className='totalPrice'>Total {totalPrice}kr</p>
           <p className='momsPrice'>inkl moms + drövarleverenas</p>
           </div>
 
