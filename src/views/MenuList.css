@@ -109,6 +109,17 @@
   height: 330px;
 }
 
-.title {
-  left: 15px;
+.totalPriceFlexbox {
+  display: flex;
 }
+
+.totalPrice {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+h1, p {
+  font-family: serif;
+}
+
