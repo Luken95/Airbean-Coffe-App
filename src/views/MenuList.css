@@ -68,6 +68,11 @@
   color: white;
   border-radius: 25px;
   position: relative;
+  width: 250px;
+  height: 45px;
+  bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .shoppingCart {
@@ -84,7 +89,7 @@
   z-index: 1;
 }
 
-.shoppingCart::backdrop{
+.shoppingCart::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -101,6 +106,7 @@
 
 .scrollCart {
   overflow: scroll;
+  height: 330px;
 }
 
 .title {

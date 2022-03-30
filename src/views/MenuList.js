@@ -110,10 +110,10 @@ function finishOrder(){
         <div className='shoppingCart' ref={ showMenu }>
 
           <div className='menuArrow'></div>
-          <section className='scrollCart'>
+          
 
           <h2>Din beställning</h2>
-          { cartListComponents }
+          <section className='scrollCart'>{ cartListComponents }</section>
           <div>
           <p className='total'>Total</p>
           <p className='totalPrice'>{totalPrice}kr</p>
@@ -121,7 +121,7 @@ function finishOrder(){
           </div>
 
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
-          </section>
+          
         </div>
 
 
