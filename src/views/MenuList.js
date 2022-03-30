@@ -89,9 +89,8 @@ function finishOrder(){
 
     return (
       <div className='menuContainer'>
-        <div>
-          <Header />
-        </div>
+        <Header />
+
         <div className='counter'>
           { counter }
         </div>
@@ -121,11 +120,8 @@ function finishOrder(){
           { listComponents }
         </div>
 
-        <div className="footer-container">
-          <Footer />
-        </div>
+        <Footer />
       </div>
-
   )
 }
 
