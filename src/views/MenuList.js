@@ -112,7 +112,7 @@ function finishOrder(){
           <div className='menuArrow'></div>
           
 
-          <h2>Din beställning</h2>
+          <h1>Din beställning</h1>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
           <p className='totalText'>Total</p> 
