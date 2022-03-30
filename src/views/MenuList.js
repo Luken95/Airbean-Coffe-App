@@ -115,8 +115,10 @@ function finishOrder(){
           <h2>Din beställning</h2>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
-          <p className='totalPrice'>Total {totalPrice}kr</p>
+          <p className='totalText'>Total</p> 
+          <p className='totalPrice'>{totalPrice}kr</p>
           <p className='momsPrice'>inkl moms + drövarleverenas</p>
+          
           </div>
 
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
