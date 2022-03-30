@@ -3,8 +3,23 @@
   background-color: #38846d;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; 
 }
+
+/* .rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+ */
+
 
 .landingText {
   position: relative;
@@ -21,4 +36,14 @@
   position: relative;
   left: 32px;
   top: -153px;
+/*   animation-duration: 2s;
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  } */
 }
