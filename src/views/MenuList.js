@@ -71,13 +71,13 @@ navigate('/nav')
 }
 
 function finishOrder(){
-  console.log(cartItems);
-  if(cartItems.lenght > 0){
+  if(cartItems.length > 0){
     dispatch(resetCart());
     navigate('/status');
   }else{
     console.log("no items in cart");
   }
+
 }
 
     return (
