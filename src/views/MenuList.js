@@ -108,7 +108,6 @@ function finishOrder(){
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
         </dialog>
 
-
         <div className="menuList">
           <h1>Meny</h1>
           { listComponents }
