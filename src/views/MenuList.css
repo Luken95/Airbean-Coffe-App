@@ -67,17 +67,21 @@
   background-color: #2f2926;
   color: white;
   border-radius: 25px;
+  position: relative;
 }
 
 .shoppingCart {
   position: absolute;
   display: none;
-  /* width: 341px; */
+  width: 341px;
+  height: auto;
   background-color: #fff;
   left: 4.53%;
   right: 4.53%;
   top: 11.03%;
   bottom: 2.6%;
+  border-radius: 3px;
+  z-index: 1;
 }
 
 .shoppingCart::backdrop{
@@ -92,4 +96,13 @@
   background-color: #fff;
   top: -5px;
   right: 12.7px;
+  z-index: 1;
+}
+
+.scrollCart {
+  overflow: scroll;
+}
+
+.title {
+  left: 15px;
 }
