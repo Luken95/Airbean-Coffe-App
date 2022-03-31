@@ -31,19 +31,17 @@ function Menylista(props) {
     async function getMenu(){
       const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu`)
       const data = await response.json();
-
       setMenu(data);
     }
-
 
     useEffect(() => {
       getMenu();
     }, []);
 
+
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
     })
-
 
     const cartListComponents = cartItems.map((thisItem) => {
       counter = counter + thisItem.quantity;
@@ -65,33 +63,29 @@ function Menylista(props) {
     })
 
 
-
-
-
-function cartOnClick() {
-  console.log(showMenu)
-  if (showMenu.current.style.display === 'block') {
-    showMenu.current.style.display = 'none'
-  } else {
-    showMenu.current.style.display = 'block';
-  }
-}
-
-
-function redirectMenu(){
-navigate('/nav');
-}
-
-function finishOrder(){
-  if(cartItems.length > 0){
-    dispatch(resetCart());
-    orderStatus(true);
-    navigate('/status');
-  }else{
-    console.log("no items in cart");
+  function cartOnClick() {
+    console.log(showMenu)
+    if (showMenu.current.style.display === 'block') {
+      showMenu.current.style.display = 'none'
+    } else {
+      showMenu.current.style.display = 'block';
+    }
   }
 
-}
+  function redirectMenu(){
+  navigate('/nav');
+  }
+
+  function finishOrder(){
+    if(cartItems.length > 0){
+      dispatch(resetCart());
+      orderStatus(true);
+      navigate('/status');
+    }else{
+      console.log("no items in cart");
+    }
+
+    }
 
     return (
       <div className='menuContainer'>
@@ -109,22 +103,22 @@ function finishOrder(){
         <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
-        <div className='shoppingCart' ref={ showMenu }>
+        <div className="modalBackground" ref={ showMenu }>
+        <div className='shoppingCart' >
 
           <div className='menuArrow'></div>
-          
 
           <h1 className='finh1'>Din beställning</h1>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
-          <p className='totalText'>Total</p> 
-          <p className='totalPrice'>{totalPrice}kr</p>
-          <p className='momsPrice'>inkl moms + drövarleverenas</p>
-          
+            <p className='totalText'>Total</p>
+            <p className='totalPrice'>{totalPrice}kr</p>
+            <p className='momsPrice'>inkl moms + drövarleverenas</p>
           </div>
 
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
-          
+
+        </div>
         </div>
 
 
