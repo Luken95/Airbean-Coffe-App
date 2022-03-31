@@ -20,10 +20,10 @@
 
 .price {
   margin: 0;
-  font-family: 'Work Sans';
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
+  font-family: 'PT Serif', serif;
 }
 
 .dotts {

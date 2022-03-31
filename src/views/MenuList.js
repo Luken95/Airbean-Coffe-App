@@ -114,7 +114,7 @@ function finishOrder(){
           <div className='menuArrow'></div>
           
 
-          <h1 className='finh1'>Din beställning</h1>
+          <h1 className='finText'>Din beställning</h1>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
           <p className='totalText'>Total</p> 
@@ -129,7 +129,7 @@ function finishOrder(){
 
 
         <div className="menuList">
-          <h1 className='finh1'>Meny</h1>
+          <h1 className='finText'>Meny</h1>
           { listComponents }
         </div>
 

@@ -21,15 +21,15 @@ function About() {
         </div>
 
         <section>
-        <h1 className="">Vårt Kaffe</h1>
+        <h1 className="aboutTitle">Vårt Kaffe</h1>
         </section>
 
         <section className="ingress">
-            <h4>Pumpkin spice mug, barista cup, sit macchiato, 
+            <p>Pumpkin spice mug, barista cup, sit macchiato, 
             kopi-luwak, doppio, grounds dripper, crema, strong whipped, 
             variety extra iced id lungo half and half mazagran. 
             Pumpkin spice. 
-            </h4>
+            </p>
         </section>
 
         <section className="styckeett">
@@ -85,29 +85,52 @@ background-color: #f3e4e1;
 
 .namn{
     font-size: 22px;
-    font-weight: 700, bold;
+    font-family: 'PT sarif';
+    font-weight: 700;
 }
 
 .vd{
-    font-size: 12px
+    font-size: 12px;
+    font-family: 'Work Sans';
+    font-weight: 600;
+
 }
 
 .ingress {
-    font-style: bold;
+    font-family: 'Work Sans';
     text-align: left;
     margin: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160%;
+
 }
 
 .styckeett {
     font-family: 'Work Sans';
     text-align: left;
     margin: 32px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160%;
+
 }
 
 .stycketvå {
-    font-family: 'PT Serif', serif;
+    font-family: 'Work Sans';
     text-align: left;
     margin: 32px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160%;
+
+}
+
+.aboutTitle {
+    font-family: 'PT sarif';
+    text-align: left;
+    margin-left: 32px;
+    font-size: 42px;
 }
 
 `
