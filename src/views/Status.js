@@ -35,16 +35,16 @@ function Status(props) {
   return (
     <section className="statusSection">
       <section className='orderStatusFalse' ref={ hideOrder }>
-        <p>Inget betällt</p>
+        <p className='pText'>Inget betällt</p>
       </section>
       <section className='orderStatusTrue' ref={ showOrder }>
         <br></br>
-        <p>Ordernummer #{eta.orderNr}</p>
+        <p className='pText'>Ordernummer #{eta.orderNr}</p>
         <br></br> <br></br> <br></br> 
         <img src={drone} alt="drone"/>
         <br></br> <br></br>
         <h3 className="ordertext"> Din beställning är påväg!</h3>
-        <p>{eta.eta} minuter</p>
+        <p className='pText'>{eta.eta} minuter</p>
         <br></br> <br></br> <br></br> 
       </section>
       <button className='statusbtn' onClick={ handleOnClick }>Ok, Cool!</button>
