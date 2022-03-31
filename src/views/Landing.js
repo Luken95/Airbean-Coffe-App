@@ -12,15 +12,15 @@ function Landing() {
         navigate('/menu')
     }
 
-  function rotatePicture (picture) {
+ /*  function rotatePicture (picture) {
       const picture = { leftLanding, rightLanding }
-  }
+  } */
 
     return (
         <section className="landingContainer">
             <img src={ landingText } alt="AIRBEAN" className='landingText'/>
             <img src={ leftLanding } alt="left" className='leftLanding'/>
-            <img src={ rightLanding } alt="right" className='rightLanding' onClick={ (clickLanding()) (rotatePicture()) }/>
+            <img src={ rightLanding } alt="right" className='rightLanding' onClick={ clickLanding }/>
         </section>
     )
 }
