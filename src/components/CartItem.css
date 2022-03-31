@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .titleSection{
@@ -24,6 +25,14 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
+}
+
+.dotts {
+  position: relative;
+    left: 79px;
+    margin-top: -32px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .quantityButton {

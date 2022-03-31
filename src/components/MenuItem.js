@@ -15,10 +15,6 @@ function MenuItem(props) {
 
   return (
     <MenuItemWrapper >
-      {/* <p>-----</p> */}
-      {/* <div className="icon-container">
-      <img src={ icon } alt="add" className="iconAdd"/>
-      </div> */}
 
       <div className="buttonMenuTitle-container">
       <input type="image" src={ icon } alt="add" className="addButton" onClick={ addToStore }/>
@@ -33,7 +29,6 @@ function MenuItem(props) {
       </div>
       <div className="Pris-container">
         <p className="menuItemPris" >{ menuItem.price }kr</p>
-
       </div>
     </MenuItemWrapper>
   )
@@ -57,7 +52,7 @@ const MenuItemWrapper = styled.section`
   position: absolute;
   left: 160px;
   margin-top: 10px;
-  font-size: 12px;  
+  font-size: 12px;
   color: rgba(0, 0, 0, 0.4);
 }
 
