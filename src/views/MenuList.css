@@ -42,6 +42,7 @@
   border-radius: 50%;
 }
 
+
 .counter {
   position: absolute;
   top: 10px;
@@ -53,7 +54,6 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  /* padding: 2px; */
   color: #fff;
 }
 
@@ -134,13 +134,14 @@
   left: 22px;
   font-size: 14px;
   font-family: 'Work Sans';
+  font-weight: 600;
 }
 
 .menuItemPris {
   margin-top: 2px;
 }
 
-.finh1 {
+.finText {
   font-family: 'PT Serif', serif;
 }
 

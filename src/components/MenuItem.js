@@ -22,7 +22,7 @@ function MenuItem(props) {
       <div className="menuTitle-container">
         <div className="titelDotts">
           <p className="menuItemTitle">{ menuItem.title }</p>
-          <p className="dottedLine">......................................</p>
+          <p className="dottedLine">............................................</p>
         </div>
         <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
@@ -48,12 +48,17 @@ const MenuItemWrapper = styled.section`
   display: flex;
 }
 
+.menuItemPris {
+  font-family: 'PT Serif', serif;
+}
+
 .dottedLine {
   position: absolute;
-  left: 160px;
-  margin-top: 10px;
+  left: 161px;
+  margin-top: 11px;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0,0,0,0.4);
+
 }
 
 .titelDotts{
@@ -84,6 +89,7 @@ const MenuItemWrapper = styled.section`
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
+  font-weight: 600;
 
 }
 
