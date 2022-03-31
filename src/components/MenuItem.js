@@ -15,10 +15,6 @@ function MenuItem(props) {
 
   return (
     <MenuItemWrapper >
-      {/* <p>-----</p> */}
-      {/* <div className="icon-container">
-      <img src={ icon } alt="add" className="iconAdd"/>
-      </div> */}
 
       <div className="buttonMenuTitle-container">
       <input type="image" src={ icon } alt="add" className="addButton" onClick={ addToStore }/>
@@ -62,6 +58,7 @@ const MenuItemWrapper = styled.section`
   margin-top: 11px;
   font-size: 12px;
   color: rgba(0,0,0,0.4);
+
 }
 
 .titelDotts{
