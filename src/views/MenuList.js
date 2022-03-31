@@ -73,7 +73,7 @@ function Menylista(props) {
         showMenuBackground.current.style.display = 'block';
       }
     }
-  }
+  
 
   function redirectMenu(){
   navigate('/nav');

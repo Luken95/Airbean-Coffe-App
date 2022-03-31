@@ -89,6 +89,7 @@ const MenuItemWrapper = styled.section`
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
+  font-weight: 600;
 
 }
 
