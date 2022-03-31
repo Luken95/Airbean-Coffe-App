@@ -102,22 +102,22 @@ function Menylista() {
         <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
-        <div className='shoppingCart' ref={ showMenu }>
+        <div className="modalBackground" ref={ showMenu }>
+        <div className='shoppingCart' >
 
           <div className='menuArrow'></div>
-          
 
           <h1>Din beställning</h1>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
-          <p className='totalText'>Total</p> 
-          <p className='totalPrice'>{totalPrice}kr</p>
-          <p className='momsPrice'>inkl moms + drövarleverenas</p>
-          
+            <p className='totalText'>Total</p>
+            <p className='totalPrice'>{totalPrice}kr</p>
+            <p className='momsPrice'>inkl moms + drövarleverenas</p>
           </div>
 
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
-          
+
+        </div>
         </div>
 
 
