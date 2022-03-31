@@ -110,18 +110,19 @@ function finishOrder(){
         <div className='shoppingCart' ref={ showMenu }>
 
           <div className='menuArrow'></div>
-          <section className='scrollCart'>
+          
 
-          <h2>Din beställning</h2>
-          { cartListComponents }
+          <h1>Din beställning</h1>
+          <section className='scrollCart'>{ cartListComponents }</section>
           <div>
-          <p className='total'>Total</p>
+          <p className='totalText'>Total</p> 
           <p className='totalPrice'>{totalPrice}kr</p>
           <p className='momsPrice'>inkl moms + drövarleverenas</p>
+          
           </div>
 
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
-          </section>
+          
         </div>
 
 

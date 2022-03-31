@@ -68,6 +68,12 @@
   color: white;
   border-radius: 25px;
   position: relative;
+  width: 250px;
+  height: 45px;
+  bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 110px;
 }
 
 .shoppingCart {
@@ -84,7 +90,7 @@
   z-index: 1;
 }
 
-.shoppingCart::backdrop{
+.shoppingCart::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -101,8 +107,29 @@
 
 .scrollCart {
   overflow: scroll;
+  height: 330px;
 }
 
-.title {
-  left: 15px;
+.totalText {
+  position: absolute;
+  left: 20px;
+  font-size: 23px;
+}
+
+.totalPrice {
+  position: absolute;
+  left: 260px;
+  font-size: 23px;
+}
+
+.momsPrice {
+  position: absolute;
+  top: 445px;
+  left: 22px;
+  font-size: 14px;
+}
+
+h1,
+p {
+  font-family: serif;
 }
