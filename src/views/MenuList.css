@@ -139,7 +139,11 @@
   margin-top: 2px;
 }
 
-h1,
-p {
+.finh1 {
   font-family: 'PT Serif', serif;
 }
+
+/* h1,
+p {
+  font-family: 'PT Serif', serif;
+} */

@@ -12,9 +12,10 @@ import styledComponents from 'styled-components';
 import { getByDisplayValue } from '@testing-library/react';
 
 
-function Menylista() {
+function Menylista(props) {
     const navigate = useNavigate(),
           dispatch = useDispatch(),
+          { orderStatus } = props,
           modal = useRef(null),
           [ menu, setMenu ] = useState([]),
           cartItems = useSelector((state) => { return state.cart }),
@@ -62,27 +63,27 @@ function Menylista() {
     })
 
 
-    function cartOnClick() {
-      console.log(showMenu)
-      if (showMenu.current.style.display === 'block') {
-        showMenu.current.style.display = 'none'
-      } else {
-        showMenu.current.style.display = 'block';
-      }
+  function cartOnClick() {
+    console.log(showMenu)
+    if (showMenu.current.style.display === 'block') {
+      showMenu.current.style.display = 'none'
+    } else {
+      showMenu.current.style.display = 'block';
     }
+  }
 
+  function redirectMenu(){
+  navigate('/nav');
+  }
 
-    function redirectMenu(){
-      navigate('/nav');
+  function finishOrder(){
+    if(cartItems.length > 0){
+      dispatch(resetCart());
+      orderStatus(true);
+      navigate('/status');
+    }else{
+      console.log("no items in cart");
     }
-
-    function finishOrder(){
-      if(cartItems.length > 0){
-        dispatch(resetCart());
-        navigate('/status');
-      }else{
-        console.log("no items in cart");
-      }
 
     }
 
@@ -107,7 +108,7 @@ function Menylista() {
 
           <div className='menuArrow'></div>
 
-          <h1>Din beställning</h1>
+          <h1 className='finh1'>Din beställning</h1>
           <section className='scrollCart'>{ cartListComponents }</section>
           <div>
             <p className='totalText'>Total</p>
@@ -122,7 +123,7 @@ function Menylista() {
 
 
         <div className="menuList">
-          <h1>Meny</h1>
+          <h1 className='finh1'>Meny</h1>
           { listComponents }
         </div>
 
