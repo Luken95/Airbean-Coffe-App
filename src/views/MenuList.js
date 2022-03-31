@@ -30,19 +30,17 @@ function Menylista() {
     async function getMenu(){
       const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu`)
       const data = await response.json();
-
       setMenu(data);
     }
-
 
     useEffect(() => {
       getMenu();
     }, []);
 
+
     const listComponents = menu.map((menuItem, index) =>{
       return <MenuItem menuItem={ menuItem } key={ index } />
     })
-
 
     const cartListComponents = cartItems.map((thisItem) => {
       counter = counter + thisItem.quantity;
@@ -64,32 +62,29 @@ function Menylista() {
     })
 
 
+    function cartOnClick() {
+      console.log(showMenu)
+      if (showMenu.current.style.display === 'block') {
+        showMenu.current.style.display = 'none'
+      } else {
+        showMenu.current.style.display = 'block';
+      }
+    }
 
 
+    function redirectMenu(){
+      navigate('/nav');
+    }
 
-function cartOnClick() {
-  console.log(showMenu)
-  if (showMenu.current.style.display === 'block') {
-    showMenu.current.style.display = 'none'
-  } else {
-    showMenu.current.style.display = 'block';
-  }
-}
+    function finishOrder(){
+      if(cartItems.length > 0){
+        dispatch(resetCart());
+        navigate('/status');
+      }else{
+        console.log("no items in cart");
+      }
 
-
-function redirectMenu(){
-navigate('/nav');
-}
-
-function finishOrder(){
-  if(cartItems.length > 0){
-    dispatch(resetCart());
-    navigate('/status');
-  }else{
-    console.log("no items in cart");
-  }
-
-}
+    }
 
     return (
       <div className='menuContainer'>
