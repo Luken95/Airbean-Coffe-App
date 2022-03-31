@@ -94,5 +94,20 @@ background-color: #f3e4e1;
 
 .ingress {
     font-style: bold;
+    text-align: left;
+    margin: 32px;
 }
+
+.styckeett {
+    font-family: 'Work Sans';
+    text-align: left;
+    margin: 32px;
+}
+
+.stycketvå {
+    font-family: 'PT Serif', serif;
+    text-align: left;
+    margin: 32px;
+}
+
 `
