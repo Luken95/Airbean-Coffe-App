@@ -134,6 +134,10 @@
   font-family: 'Work Sans';
 }
 
+.menuItemPris {
+  margin-top: 2px;
+}
+
 h1,
 p {
   font-family: 'PT Serif', serif;

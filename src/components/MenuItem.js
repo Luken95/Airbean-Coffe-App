@@ -26,7 +26,7 @@ function MenuItem(props) {
       <div className="menuTitle-container">
         <div className="titelDotts">
           <p className="menuItemTitle">{ menuItem.title }</p>
-          {/*<p className="dottedLine">............................</p>*/}
+          <p className="dottedLine">......................................</p>
         </div>
         <p className="menuItemDesc" >{ menuItem.desc }</p>
       </div>
@@ -51,6 +51,14 @@ const MenuItemWrapper = styled.section`
 
 .buttonMenuTitle-container{
   display: flex;
+}
+
+.dottedLine {
+  position: absolute;
+  left: 160px;
+  margin-top: 10px;
+  font-size: 12px;  
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .titelDotts{
