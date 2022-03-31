@@ -20,10 +20,11 @@
   background-repeat: no-repeat;
   background-color: rgb(0, 0, 0);
   background-position: center;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 0 16px rgba(0, 0, 0, 0.12); */
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  z-index: 3;
 }
 
 .menuButton {
@@ -46,7 +47,7 @@
   position: absolute;
   top: 10px;
   left: 335px;
-  z-index: 2;
+  z-index: 4;
   background-color: #e5674e;
   display: flex;
   justify-content: center;
@@ -70,6 +71,17 @@
   font-family: 'PT Serif', serif;
 }
 
+.modalBackground {
+  position: absolute;
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  z-index: 2;
+}
+
 .shoppingCart {
   position: absolute;
   display: none;
@@ -81,9 +93,10 @@
   top: 11.03%;
   bottom: 2.6%;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 3;
   font-family: 'PT Serif', serif;
 }
+
 
 .menuArrow {
   position: absolute;
@@ -93,7 +106,7 @@
   background-color: #fff;
   top: -5px;
   right: 12.7px;
-  z-index: 1;
+  z-index: 6;
 }
 
 .scrollCart {
