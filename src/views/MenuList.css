@@ -10,10 +10,6 @@
   height: 530px;
 }
 
-.modal::backdrop {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 .cartButton {
   position: absolute;
   left: 79.73%;
@@ -45,8 +41,6 @@
   border-radius: 50%;
 }
 
-/* .closeCartButton {
-} */
 
 .counter {
   position: absolute;
@@ -59,7 +53,6 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  /* padding: 2px; */
   color: #fff;
 }
 
@@ -90,10 +83,6 @@
   border-radius: 3px;
   z-index: 1;
   font-family: 'PT Serif', serif;
-}
-
-.shoppingCart::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .menuArrow {
@@ -132,6 +121,7 @@
   left: 22px;
   font-size: 14px;
   font-family: 'Work Sans';
+  font-weight: 600;
 }
 
 .menuItemPris {
