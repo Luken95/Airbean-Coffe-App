@@ -29,7 +29,6 @@ function MenuItem(props) {
       </div>
       <div className="Pris-container">
         <p className="menuItemPris" >{ menuItem.price }kr</p>
-
       </div>
     </MenuItemWrapper>
   )
