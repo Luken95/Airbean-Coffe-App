@@ -10,10 +10,6 @@
   height: 530px;
 }
 
-.modal::backdrop {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 .cartButton {
   position: absolute;
   left: 79.73%;
@@ -45,9 +41,6 @@
   height: 48px;
   border-radius: 50%;
 }
-
-/* .closeCartButton {
-} */
 
 .counter {
   position: absolute;
@@ -112,7 +105,7 @@
   background-color: #fff;
   top: -5px;
   right: 12.7px;
-  z-index: 4;
+  z-index: 6;
 }
 
 .scrollCart {
