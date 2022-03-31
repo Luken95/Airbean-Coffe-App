@@ -18,6 +18,7 @@ function subtractItem(){
       <section className="titleSection">
       <p className="title">{cartItem.title}</p>
       <p className="price">{quantity*cartItem.price}kr</p>
+      <p className='dotts'>.......................................................</p>
       </section>
       <section className="quantitySection">
       <button className="quantityButton addButton" onClick={ addItem }></button>
