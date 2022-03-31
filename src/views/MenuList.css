@@ -84,6 +84,7 @@
 
 .shoppingCart {
   position: absolute;
+  display: none;
   width: 341px;
   height: auto;
   background-color: #fff;

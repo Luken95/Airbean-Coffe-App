@@ -16,7 +16,7 @@ function Menylista(props) {
     const navigate = useNavigate(),
           dispatch = useDispatch(),
           { orderStatus } = props,
-          modal = useRef(null),
+          showMenuBackground = useRef(null),
           [ menu, setMenu ] = useState([]),
           cartItems = useSelector((state) => { return state.cart }),
           showMenu = useRef(null);
@@ -63,12 +63,15 @@ function Menylista(props) {
     })
 
 
-  function cartOnClick() {
-    console.log(showMenu)
-    if (showMenu.current.style.display === 'block') {
-      showMenu.current.style.display = 'none'
-    } else {
-      showMenu.current.style.display = 'block';
+    function cartOnClick() {
+      console.log(showMenu)
+      if (showMenu.current.style.display === 'block') {
+        showMenu.current.style.display = 'none';
+        showMenuBackground.current.style.display = 'none';
+      } else {
+        showMenu.current.style.display = 'block';
+        showMenuBackground.current.style.display = 'block';
+      }
     }
   }
 
@@ -103,8 +106,8 @@ function Menylista(props) {
         <button className='menuButton' onClick={ redirectMenu }> </button>
         </div>
 
-        <div className="modalBackground" ref={ showMenu }>
-        <div className='shoppingCart' >
+        <div className="modalBackground" ref={ showMenuBackground }></div>
+        <div className='shoppingCart'ref={ showMenu } >
 
           <div className='menuArrow'></div>
 
@@ -118,7 +121,7 @@ function Menylista(props) {
 
           <button className="moneyBtn" onClick={ finishOrder }>Take my money!</button>
 
-        </div>
+
         </div>
 
 
