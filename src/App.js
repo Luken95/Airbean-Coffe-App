@@ -21,7 +21,7 @@ function App() {
       <Route path='/menu' element={ <MenuList orderStatus={ setOrderStatus }/> } />
       <Route path="/about" element = { <About/> } />
       <Route path="/nav" element= { <Nav/> } />
-      <Route path="/status" element={ <Status orderStatus={orderStatus}/> } />
+      <Route path="/status" element={ <Status orderStatus={ orderStatus }/> } />
 
      </Routes>
     </div>
