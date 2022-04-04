@@ -20,6 +20,9 @@ border-radius: 25px;
 border: none;
 font-size: 20px;
 font-weight: 600;
+position: absolute;
+left: 120px;
+bottom: 50px;
 }
 
 .orderStatusTrue {

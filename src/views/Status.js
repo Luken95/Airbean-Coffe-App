@@ -14,7 +14,6 @@ function Status(props) {
     const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/order`)
     const data = await response.json();
 
-    console.log(data);
     setEta(data);
   }
 
@@ -35,7 +34,7 @@ function Status(props) {
   return (
     <section className="statusSection">
       <section className='orderStatusFalse' ref={ hideOrder }>
-        <p className='pText'>Inget betällt</p>
+        <h3 className='ordertext'>Gör en beställning först</h3>
       </section>
       <section className='orderStatusTrue' ref={ showOrder }>
         <br></br>
