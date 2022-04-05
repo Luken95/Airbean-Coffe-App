@@ -15,7 +15,7 @@ import { getByDisplayValue } from '@testing-library/react';
 function Menylista(props) {
     const navigate = useNavigate(),
           dispatch = useDispatch(),
-          { orderStatus } = props,
+          { orderStatus, setOrderHistory } = props,
           showMenuBackground = useRef(null),
           [ menu, setMenu ] = useState([]),
           cartItems = useSelector((state) => { return state.cart }),
@@ -73,7 +73,7 @@ function Menylista(props) {
         showMenuBackground.current.style.display = 'block';
       }
     }
-  
+
 
   function redirectMenu(){
   navigate('/nav');
@@ -81,6 +81,7 @@ function Menylista(props) {
 
   function finishOrder(){
     if(cartItems.length > 0){
+      setOrderHistory(cartItems);
       dispatch(resetCart());
       orderStatus(true);
       navigate('/status');

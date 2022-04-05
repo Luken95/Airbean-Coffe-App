@@ -12,9 +12,11 @@ import Login  from './views/LogIn';
 
 function App() {
 
-  const [orderStatus, setOrderStatus] = useState(false)
+  const [orderStatus, setOrderStatus] = useState(false);
+  const [orderHistory, setOrderHistory] = useState({});
 
   return (
+
     <div className="App">
      <Routes>
 
