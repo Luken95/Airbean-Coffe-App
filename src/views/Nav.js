@@ -20,9 +20,13 @@ return(
 <br></br>
 <div className="dash"></div>
 <br></br>
-<Link className='Links' to="/status" style={{ textDecoration: 'none' }}> Orderstatus </Link>
+<Link className='Links' to="/login" style={{ textDecoration: 'none' }}> Min profil </Link>
 <br></br>
 <div className="dash"></div>
+<br></br>
+<Link className='Links' to="/status" style={{ textDecoration: 'none' }}> Orderstatus </Link>
+<br></br>
+
 
 </section>
 )
