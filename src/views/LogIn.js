@@ -14,9 +14,10 @@ const navigate = useNavigate();
         }
 
     return(
-        <section >
+        <div className="logInFormMain">
             <Header />
             <button className='menuButton' onClick={ redirectMenu }> </button>
+            <section className="logInForm">
             <form className="login">
             <h1>Välkommen till AirBean-familjen!</h1>
             <p>Genom att skapa ett konto nedan kan du spara och se din orderhistorik.</p>
@@ -26,7 +27,8 @@ const navigate = useNavigate();
             <input type="text" className="password"></input>
             <button type="button" className="logInButton" onClick={ navigatetologgedin }>Logga in</button>
             </form>
-        </section>
+            </section>
+        </div>
 
     )
 }
