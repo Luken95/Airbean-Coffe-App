@@ -8,6 +8,7 @@ import Landing from './views/Landing';
 import MenuList from './views/MenuList';
 import Nav from './views/Nav';
 import About from './views/About';
+import Login  from './views/LogIn';
 
 function App() {
 
@@ -20,10 +21,11 @@ function App() {
      <Routes>
 
       <Route path='/*' element={ <Landing /> } />
-      <Route path='/menu' element={ <MenuList orderStatus={ setOrderStatus } setOrderHistory={ setOrderHistory }/> } />
-      <Route path="/about" element = { <About /> } />
-      <Route path="/nav" element= { <Nav /> } />
-      <Route path="/status" element={ <Status orderStatus={ orderStatus } orderHistory={ orderHistory } setOrderHistory={ setOrderHistory } /> } />
+      <Route path='/menu' element={ <MenuList orderStatus={ setOrderStatus }/> } />
+      <Route path="/about" element = { <About/> } />
+      <Route path="/nav" element= { <Nav/> } />
+      <Route path="/status" element={ <Status orderStatus={orderStatus}/> } />
+      <Route path="/login" element={ < Login /> } />
 
      </Routes>
     </div>
