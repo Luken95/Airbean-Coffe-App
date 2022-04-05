@@ -9,6 +9,7 @@ import MenuList from './views/MenuList';
 import Nav from './views/Nav';
 import About from './views/About';
 import Login  from './views/LogIn';
+import Loggedin from './views/Loggedin';
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
       <Route path="/about" element = { <About/> } />
       <Route path="/nav" element= { <Nav/> } />
       <Route path="/status" element={ <Status orderStatus={orderStatus}/> } />
-      <Route path="/login" element={ < Login /> } />
+      <Route path="/login" element={ <Login /> } />
+      <Route path="/loggedin" element={ <Loggedin />} />
 
      </Routes>
     </div>
