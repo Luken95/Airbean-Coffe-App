@@ -7,9 +7,7 @@ import './MenuList.css'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CartItem from "../components/CartItem";
-import MenuItem from '../components/MenuItem'
-import styledComponents from 'styled-components';
-import { getByDisplayValue } from '@testing-library/react';
+import MenuItem from '../components/MenuItem';
 
 
 function Menylista(props) {
