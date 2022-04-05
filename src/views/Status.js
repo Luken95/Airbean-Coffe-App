@@ -15,6 +15,9 @@ function Status(props) {
     const data = await response.json();
 
     setEta(data);
+    const orderHistoryAndNumber = [eta.orderNr, orderHistory]
+    setOrderHistory(orderHistoryAndNumber);
+    console.log(orderHistory);
   }
 
   function handleOnClick() {
@@ -23,9 +26,6 @@ function Status(props) {
 
   useEffect(() => {
     getETA();
-    const orderHistoryAndNumber = [eta.orderNr, orderHistory]
-    setOrderHistory(orderHistoryAndNumber);
-    console.log(orderHistory);
     if(orderStatus){
       showOrder.current.style.display = 'block';
       hideOrder.current.style.display = 'none';

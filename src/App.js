@@ -22,10 +22,10 @@ function App() {
      <Routes>
 
       <Route path='/*' element={ <Landing /> } />
-      <Route path='/menu' element={ <MenuList orderStatus={ setOrderStatus }/> } />
+      <Route path='/menu' element={ <MenuList orderStatus={ setOrderStatus } setOrderHistory={ setOrderHistory }/> } />
       <Route path="/about" element = { <About/> } />
       <Route path="/nav" element= { <Nav/> } />
-      <Route path="/status" element={ <Status orderStatus={orderStatus}/> } />
+      <Route path="/status" element={ <Status orderStatus={ orderStatus } setOrderHistory={ setOrderHistory } orderHistory={ orderHistory }/> } />
       <Route path="/login" element={ <Login /> } />
       <Route path="/loggedin" element={ <Loggedin />} />
 
