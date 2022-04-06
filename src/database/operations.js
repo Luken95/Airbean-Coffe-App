@@ -51,10 +51,10 @@ async function addOrder(username, order) {
 }
 
 async function getUsers() {
-  const conserts = await database.find({
+  const users = await database.find({
     type: 'users'
   });
-  return conserts;
+  return users;
 }
 
 module.exports = {saveUsers, findUser, addOrder, getUsers}
