@@ -10,7 +10,7 @@ const users = {
             "email":"anders@anders.se",
             orderhistorik: {
 
-            }           
+            }
         },
         {
             "id":1,
@@ -18,7 +18,7 @@ const users = {
             "email":"bosse@bosse.se",
             orderhistorik: {
 
-            }           
+            }
         },
         {
             "id":1,
@@ -26,7 +26,7 @@ const users = {
             "email":"christoffer@christoffer.se",
             orderhistorik: {
 
-            }           
+            }
         },
     ]
 }
@@ -41,7 +41,7 @@ async function findUser(username) {
 
 async function addOrder(username, order) {
     database.update({
-        username: username 
+        username: username
         },{
         $push: {
             orderhistorik: order
@@ -50,4 +50,11 @@ async function addOrder(username, order) {
     })
 }
 
-module.exports = {saveUsers, findUser, addOrder}
+async function getUsers() {
+  const conserts = await database.find({
+    type: 'users'
+  });
+  return conserts;
+}
+
+module.exports = {saveUsers, findUser, addOrder, getUsers}
