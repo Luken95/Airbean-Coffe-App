@@ -28,6 +28,7 @@
     border-radius: 6px;
     margin-top: 3px;
     background-color: #f3e4e1;
+    font-size: 16px;
 }
 
 .password{
@@ -36,6 +37,7 @@
     border-radius: 6px;
     margin-top: 3px;
     background-color: #f3e4e1;
+    font-size: 16px;
 }
 
 .logInButton{
