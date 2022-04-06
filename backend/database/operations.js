@@ -13,7 +13,7 @@ const users = {
             }
         },
         {
-            "id":1,
+            "id":2,
             username:"Bosse",
             "email":"bosse@bosse.se",
             orderhistorik: {
@@ -21,7 +21,7 @@ const users = {
             }
         },
         {
-            "id":1,
+            "id":3,
             username:"Christoffer",
             "email":"christoffer@christoffer.se",
             orderhistorik: {
@@ -29,6 +29,10 @@ const users = {
             }
         },
     ]
+}
+
+async function getUsers() {
+    return await database.find({ type: 'users'});
 }
 
 async function saveUsers() {
@@ -48,13 +52,6 @@ async function addOrder(username, order) {
         }
 
     })
-}
-
-async function getUsers() {
-  const users = await database.find({
-    type: 'users'
-  });
-  return users;
 }
 
 module.exports = {saveUsers, findUser, addOrder, getUsers}
