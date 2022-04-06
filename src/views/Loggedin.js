@@ -13,7 +13,21 @@ function Loggedin (){
         <section className="loggedin">
             <Header />
             <button className='menuButton' onClick={ redirectMenu }> </button>
-            <p>här kommer du se din order historik</p>
+            <section className="user">
+            <h1>bild</h1>
+            <h2>sixten kafflöver</h2>
+            <p>här visas  din email</p>
+            </section>
+        
+            <br></br>
+            <div className="orderhistorik">
+            <h3> Orderhistorik</h3>
+            <p>här visas din orderhistorik</p>
+            <p>här visas din orderhistorik</p>
+            <p>här visas din orderhistorik</p>
+            <p>här visas din orderhistorik</p>
+            </div>
+
 
         </section>
 
