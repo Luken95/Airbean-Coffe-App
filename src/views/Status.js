@@ -32,7 +32,7 @@ function Status(props) {
     }
   }, []);
 
-
+  
 
   return (
     <section className="statusSection">
