@@ -5,6 +5,8 @@ import leftLanding from '../assets/graphics/intro-graphic-left.svg';
 import rightLanding from '../assets/graphics/intro-graphic-right.svg';
 import { useNavigate } from 'react-router-dom'
 
+//const { findUsers } = require('../database/operations')
+
 function Landing() {
     const navigate = useNavigate();
 
