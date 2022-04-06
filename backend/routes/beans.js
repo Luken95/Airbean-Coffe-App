@@ -3,7 +3,7 @@ const router = new Router()
 const fs = require('fs');
 const uuid = require('uuid-random');
 const { generateOrderNr, generateETA } = require('../utils/utils');
-const { db } = require('../utils/db')
+//const { db } = require('../utils/db')
 
 router.get('/', async (req, res) => {
     const menu = fs.createReadStream('data/menu.json');
@@ -16,6 +16,7 @@ router.post('/order', async (req, res) => {
     const order = {
         eta: generateETA(),
         orderNr: generateOrderNr(),
+        
     }
 
     res.json(order);
