@@ -12,7 +12,7 @@ function Status(props) {
   const userName = "Anders";
 
   async function getETA(){
-    const price = {orderHistory}
+    const price = { orderHistory }
     const response = await fetch('http://localhost:5000/api/beans/order', {
       method: 'POST',
       body: JSON.stringify(price),
@@ -20,9 +20,8 @@ function Status(props) {
         'Content-Type': 'application/json'
       }
     });
-
     const data = await response.json();
-
+    console.log(data)
     setEta(data);
   }
 

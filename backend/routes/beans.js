@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     menu.pipe(res);
 });
 
-
 router.post('/order', async (req, res) => {
     const totalPrice = req.body;
     const order = {
