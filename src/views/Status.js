@@ -9,6 +9,7 @@ function Status(props) {
   const showOrder = useRef(null);
   const hideOrder = useRef(null);
   const { orderStatus, orderHistory, setOrderHistory} = props;
+  const userName = "Anders";
 
   async function getETA(){
     const price = {orderHistory}
