@@ -8,8 +8,8 @@ function Status(props) {
   const navigate = useNavigate();
   const showOrder = useRef(null);
   const hideOrder = useRef(null);
-  const { orderStatus, orderHistory, setOrderHistory} = props;
-  const userName = "Anders";
+  const { orderStatus, orderHistory } = props;
+  //const userName = "Anders";
 
   async function getETA(){
     const price = { orderHistory }
