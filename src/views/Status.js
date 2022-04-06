@@ -9,23 +9,33 @@ function Status(props) {
   const showOrder = useRef(null);
   const hideOrder = useRef(null);
   const { orderStatus, orderHistory, setOrderHistory} = props;
+  const userName = "Anders";
 
   async function getETA(){
-    const response = await fetch(`https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/order`)
+    const price = {orderHistory}
+    const response = await fetch('http://localhost:5000/api/beans/order', {
+      method: 'POST',
+      body: JSON.stringify(price),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
     const data = await response.json();
 
     setEta(data);
-    const orderHistoryAndNumber = [eta.orderNr, orderHistory]
-    setOrderHistory(orderHistoryAndNumber);
-    console.log(orderHistory);
   }
+
 
   function handleOnClick() {
     navigate('/menu');
   }
 
   useEffect(() => {
-    getETA();
+    if(orderHistory.length > 1){
+      getETA();
+    }
+
     if(orderStatus){
       showOrder.current.style.display = 'block';
       hideOrder.current.style.display = 'none';

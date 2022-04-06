@@ -10,7 +10,7 @@ const users = {
             "email":"anders@anders.se",
             orderhistorik: {
 
-            }           
+            }
         },
         {
             "id":2,
@@ -18,7 +18,7 @@ const users = {
             "email":"bosse@bosse.se",
             orderhistorik: {
 
-            }           
+            }
         },
         {
             "id":3,
@@ -26,7 +26,7 @@ const users = {
             "email":"christoffer@christoffer.se",
             orderhistorik: {
 
-            }           
+            }
         },
     ]
 }
@@ -45,7 +45,7 @@ async function findUser(username) {
 
 async function addOrder(username, order) {
     database.update({
-        username: username 
+        username: username
         },{
         $push: {
             orderhistorik: order

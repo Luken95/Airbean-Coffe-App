@@ -62,7 +62,6 @@ function Menylista(props) {
 
 
     function cartOnClick() {
-      console.log(showMenu)
       if (showMenu.current.style.display === 'block') {
         showMenu.current.style.display = 'none';
         showMenuBackground.current.style.display = 'none';
@@ -79,7 +78,7 @@ function Menylista(props) {
 
   function finishOrder(){
     if(cartItems.length > 0){
-      setOrderHistory(cartItems);
+      setOrderHistory(totalPrice);
       dispatch(resetCart());
       orderStatus(true);
       navigate('/status');
