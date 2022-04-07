@@ -1,38 +1,30 @@
 const nedb = require('nedb-promise');
 const database = new nedb({ filename: 'users.db', autoload: true});
 
-const users = {
-    'type': 'users',
-    'all-users': [
-        {
+const users = [{
             "id":1,
-            username :"Anders",
-            "email":"anders@anders.se",
-            orderhistorik: {
-
-            }
+            "username": "Anders",
+            "email": "anders@anders.se",
+            "orderhistorik": []
         },
+
         {
             "id":2,
-            username:"Bosse",
+            "username":"Bosse",
             "email":"bosse@bosse.se",
-            orderhistorik: {
-
-            }
+            "orderhistorik": []
         },
+
         {
             "id":3,
-            username:"Christoffer",
+            "username":"Christoffer",
             "email":"christoffer@christoffer.se",
-            orderhistorik: {
+            "orderhistorik": []
+        }]
 
-            }
-        },
-    ]
-}
 
 async function getUsers() {
-    return await database.find({ type: 'users'});
+    return await database.find({});
 }
 
 async function saveUsers() {
@@ -44,6 +36,9 @@ async function findUser(username) {
 }
 
 async function addOrder(username, order) {
+  console.log(username);
+  console.log(order);
+
     database.update({
         username: username
         },{

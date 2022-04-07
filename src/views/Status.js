@@ -9,10 +9,10 @@ function Status(props) {
   const showOrder = useRef(null);
   const hideOrder = useRef(null);
   const { orderStatus, orderHistory } = props;
-  //const userName = "Anders";
+  const userName = "Anders";
 
   async function getETA(){
-    const price = {orderHistory}
+    const price = { orderHistory }
     const response = await fetch('http://localhost:5000/api/beans/order', {
       method: 'POST',
       body: JSON.stringify(price),
@@ -20,11 +20,23 @@ function Status(props) {
         'Content-Type': 'application/json'
       }
     });
-
     const data = await response.json();
-
+    console.log(data);
     setEta(data);
+
   }
+
+  // async function saveOrder(){
+  //   const response = await fetch('http://localhost:5000/api/beans/saveOrder', {
+  //     method: 'POST',
+  //     body: JSON.stringify({eta, userName}),
+  //     headers: {
+  //     'Content-Type': 'application/json'
+  //   }
+  // });
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
 
 
   function handleOnClick() {
@@ -32,8 +44,9 @@ function Status(props) {
   }
 
   useEffect(() => {
-    if(orderHistory.length > 1){
+    if(orderStatus){
       getETA();
+      //saveOrder();
     }
 
     if(orderStatus){
@@ -42,7 +55,7 @@ function Status(props) {
     }
   }, []);
 
-  
+
 
   return (
     <section className="statusSection">
