@@ -26,18 +26,6 @@ function Status(props) {
 
   }
 
-  // async function saveOrder(){
-  //   const response = await fetch('http://localhost:5000/api/beans/saveOrder', {
-  //     method: 'POST',
-  //     body: JSON.stringify({eta, userName}),
-  //     headers: {
-  //     'Content-Type': 'application/json'
-  //   }
-  // });
-  //   const data = await response.json();
-  //   console.log(data);
-  // }
-
 
   function handleOnClick() {
     navigate('/menu');
@@ -46,7 +34,6 @@ function Status(props) {
   useEffect(() => {
     if(orderStatus){
       getETA();
-      //saveOrder();
     }
 
     if(orderStatus){

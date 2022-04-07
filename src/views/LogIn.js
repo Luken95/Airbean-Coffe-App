@@ -1,13 +1,15 @@
 import Header from "../components/Header"
 import './LogIn.css';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
 
 function Login (){
-const navigate = useNavigate();
+  const [userName, setUserName] = useState();
+  const navigate = useNavigate();
 
     function navigatetologgedin(){
-        navigate('/loggedin')
-    }
+        navigate('/loggedin');
+      }
 
     function redirectMenu(){
         navigate('/nav');
