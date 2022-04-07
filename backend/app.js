@@ -14,7 +14,6 @@ app.use('/api/beans', beansRouter)
 
 async function saveAllUsers() {
     const database = await getUsers();
-    console.log(database)
     if (database < 1) {
         saveUsers();
     }
@@ -25,5 +24,3 @@ saveAllUsers();
 
 
 app.listen(5000, () => console.log(`Server started on port ${PORT}`))
-
-

@@ -3,6 +3,7 @@ const router = new Router()
 const fs = require('fs');
 const uuid = require('uuid-random');
 const { generateOrderNr, generateETA } = require('../utils/utils');
+const { saveUsers, findUser, addOrder, getUsers } = require('../database/operations');
 // const { db } = require('../utils/db')
 
 router.get('/', async (req, res) => {
@@ -10,14 +11,18 @@ router.get('/', async (req, res) => {
     menu.pipe(res);
 });
 
+
 router.post('/order', async (req, res) => {
     const totalPrice = req.body;
+    const date = new Date();
     const order = {
         eta: generateETA(),
         orderNr: generateOrderNr(),
         totalPrice: totalPrice.orderHistory,
-        date: "1"
+        date: date.toDateString()
     }
+
+    addOrder("Anders", order);
 
     res.json(order);
 });
@@ -36,7 +41,15 @@ router.post('/key', (req, res) => {
 router.post('/updateDB', (req, res) => {
   const order = req.body;
 
-})
+});
+
+// router.post('/saveOrder', (req, res) =>{
+//   const order = req.body;
+//
+//   console.log(order);
+//
+//
+// })
 
 
 
