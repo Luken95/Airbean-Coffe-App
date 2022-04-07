@@ -13,11 +13,12 @@ router.get('/', async (req, res) => {
 
 router.post('/order', async (req, res) => {
     const totalPrice = req.body;
+    const date = new Date();
     const order = {
         eta: generateETA(),
         orderNr: generateOrderNr(),
         totalPrice: totalPrice.orderHistory,
-        date: "1"
+        date: date.toDateString()
     }
 
     res.json(order);

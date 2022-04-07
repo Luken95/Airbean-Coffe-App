@@ -9,7 +9,6 @@ function Status(props) {
   const showOrder = useRef(null);
   const hideOrder = useRef(null);
   const { orderStatus, orderHistory } = props;
-  //const userName = "Anders";
 
   async function getETA(){
     const price = {orderHistory}
@@ -32,9 +31,9 @@ function Status(props) {
   }
 
   useEffect(() => {
-    if(orderHistory.length > 1){
+    //if(orderHistory.length > 1){
       getETA();
-    }
+    //}
 
     if(orderStatus){
       showOrder.current.style.display = 'block';
