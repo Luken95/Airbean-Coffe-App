@@ -1,11 +1,13 @@
 import Header from "../components/Header"
 import './Loggedin.css';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function Loggedin (props){
     const navigate = useNavigate();
     const { username } = props;
+
+    const [ user, setUser ] = useState(''); 
 
     function redirectMenu(){
         navigate('/nav');
@@ -19,6 +21,7 @@ function Loggedin (props){
             }
         })
         const data = await res.json();
+        setUser(data);
         console.log(data)
     }
 
@@ -29,18 +32,14 @@ function Loggedin (props){
             <Header />
             <button className='menuButton' onClick={ redirectMenu }> </button>
             <section className="user">
-            <h1>bild</h1>
-            <h2>sixten kafflöver</h2>
-            <p>här visas  din email</p>
+            <h2>{user.length > 0 ? user[0].username : 'DITT NAMN'}</h2>
             </section>
         
             <br></br>
             <div className="orderhistorik">
             <h3> Orderhistorik</h3>
-            <p>här visas din orderhistorik</p>
-            <p>här visas din orderhistorik</p>
-            <p>här visas din orderhistorik</p>
-            <p>här visas din orderhistorik</p>
+            <p>{user.length > 0 ? user[0].orderhistorik[0].orderNr : 'ORDERHISTORIK'} </p>
+
             </div>
 
 
