@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 
 function Login (){
-  const [userName, setUserName] = useState();
   const navigate = useNavigate();
 
     function navigatetologgedin(){
