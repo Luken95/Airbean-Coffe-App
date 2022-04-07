@@ -9,7 +9,6 @@ function MenuItem(props) {
   const dispatch = useDispatch();
 
   function addToStore() {
-    console.log(menuItem);
     dispatch(addCartItem(menuItem));
   }
 

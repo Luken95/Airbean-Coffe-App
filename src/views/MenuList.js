@@ -62,7 +62,6 @@ function Menylista(props) {
 
 
     function cartOnClick() {
-      console.log(showMenu)
       if (showMenu.current.style.display === 'block') {
         showMenu.current.style.display = 'none';
         showMenuBackground.current.style.display = 'none';
