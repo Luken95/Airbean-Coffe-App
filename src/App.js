@@ -15,6 +15,7 @@ function App() {
 
   const [orderStatus, setOrderStatus] = useState(false);
   const [orderHistory, setOrderHistory] = useState({});
+  const [username, setUsername] = useState('');
 
   return (
 
@@ -26,8 +27,8 @@ function App() {
       <Route path="/about" element = { <About/> } />
       <Route path="/nav" element= { <Nav/> } />
       <Route path="/status" element={ <Status orderStatus={ orderStatus } setOrderHistory={ setOrderHistory } orderHistory={ orderHistory }/> } />
-      <Route path="/login" element={ <Login /> } />
-      <Route path="/loggedin" element={ <Loggedin />} />
+      <Route path="/login" element={ <Login setUsername={ setUsername }/> } />
+      <Route path="/loggedin" element={ <Loggedin username={ username }/>} />
 
      </Routes>
     </div>

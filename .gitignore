@@ -6,8 +6,6 @@
 /.pnp
 .pnp.js
 users.db
-/backend/users.db
-.db
 
 # testing
 /coverage
@@ -16,6 +14,7 @@ users.db
 /build
 
 # misc
+.db
 .DS_Store
 .env.local
 .env.development.local
