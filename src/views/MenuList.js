@@ -8,8 +8,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CartItem from "../components/CartItem";
 import MenuItem from '../components/MenuItem'
-import styledComponents from 'styled-components';
-import { getByDisplayValue } from '@testing-library/react';
 
 
 function Menylista(props) {
@@ -73,7 +71,7 @@ function Menylista(props) {
         showMenuBackground.current.style.display = 'block';
       }
     }
-  
+
 
   function redirectMenu(){
   navigate('/nav');
