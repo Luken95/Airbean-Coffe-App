@@ -48,7 +48,7 @@ router.get('/userData', async (req, res) => {
     const thisUser = await findUser(user);
     console.log(thisUser)
 
-    res.json('hej')
+    res.json(thisUser)
 })
 
 // router.post('/saveOrder', (req, res) =>{
