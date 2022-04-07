@@ -2,8 +2,9 @@ import Header from "../components/Header"
 import './LogIn.css';
 import { useNavigate } from 'react-router-dom';
 
-function Login (){
+function Login (props){
 const navigate = useNavigate();
+const { setUsername } = props;
 
     function navigatetologgedin(){
         navigate('/loggedin')
@@ -12,6 +13,10 @@ const navigate = useNavigate();
     function redirectMenu(){
         navigate('/nav');
         }
+    
+    function handleKeyUp(e){
+        setUsername(e.target.value);
+    }
 
     return(
         <div className="logInFormMain">
@@ -22,7 +27,7 @@ const navigate = useNavigate();
             <h1>Välkommen till AirBean-familjen!</h1>
             <p>Genom att skapa ett konto nedan kan du spara och se din orderhistorik.</p>
             <label>Namn</label>
-            <input type="text" className="userName"></input>
+            <input type="text" className="userName" onKeyUp={ handleKeyUp }></input>
             <label>Lösenord</label>
             <input type="text" className="password"></input>
             <button type="button" className="logInButton" onClick={ navigatetologgedin }>Logga in</button>

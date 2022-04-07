@@ -43,6 +43,12 @@ router.post('/updateDB', (req, res) => {
 
 });
 
+router.get('/userData', async (req, res) => {
+    const user = req.headers.authorization.replace('Bearer', '')
+    console.log(user)
+    res.json('hej')
+})
+
 // router.post('/saveOrder', (req, res) =>{
 //   const order = req.body;
 //

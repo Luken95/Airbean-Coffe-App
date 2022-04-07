@@ -1,3 +1,3 @@
-{"id":1,"username":"Anders","email":"anders@anders.se","orderhistorik":[],"_id":"PsgFKzFgvaAcK8N5"}
+{"id":1,"username":"Anders","email":"anders@anders.se","orderhistorik":[{"eta":15,"orderNr":"AB1649322769134Z","totalPrice":88,"date":"Thu Apr 07 2022"},{"eta":29,"orderNr":"AB1649322826511X","totalPrice":88,"date":"Thu Apr 07 2022"},{"eta":27,"orderNr":"AB1649322971874Z","totalPrice":88,"date":"Thu Apr 07 2022"},{"eta":13,"orderNr":"AB1649323260933X","totalPrice":98,"date":"Thu Apr 07 2022"}],"_id":"PsgFKzFgvaAcK8N5"}
 {"id":2,"username":"Bosse","email":"bosse@bosse.se","orderhistorik":[],"_id":"VlxkwWBvaRa26ctO"}
 {"id":3,"username":"Christoffer","email":"christoffer@christoffer.se","orderhistorik":[],"_id":"hmUTlohcX2WL35gf"}
